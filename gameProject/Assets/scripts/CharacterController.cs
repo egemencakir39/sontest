@@ -12,6 +12,8 @@ public class CharacterController : MonoBehaviour
     private Rigidbody2D rb;
     private Collider2D col;
     
+    
+    
 
     private void Start()
     {
@@ -23,6 +25,7 @@ public class CharacterController : MonoBehaviour
 
     private void Update()
     {
+        flipface();
         // zemin temas kontrolü
         isGrounded = Physics2D.IsTouchingLayers(col, LayerMask.GetMask("Ground"));
 
@@ -46,5 +49,18 @@ public class CharacterController : MonoBehaviour
         rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
         
         
+    }
+     void flipface() // karakterin yüzünü döndürme
+    {
+       Vector2 GeciciScale = transform.localScale;
+        if (rb.velocity.x>0)
+        {
+            GeciciScale.x = 10f;
+        }
+        else if (rb.velocity.x<0)
+        {
+            GeciciScale.x = -10f;
+        }
+        transform.localScale = GeciciScale;
     }
 }
