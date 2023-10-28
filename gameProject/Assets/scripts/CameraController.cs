@@ -17,9 +17,5 @@ public class CameraController : MonoBehaviour
         // Oyuncunun x ve y pozisyonlarýný kameranýn pozisyonuna kopyala
         Vector3 targetPosition = new Vector3(PlayerTransform.position.x, PlayerTransform.position.y, transform.position.z);
         transform.position = targetPosition;
-    }
-    
-	
-
-	
+    }	
 }

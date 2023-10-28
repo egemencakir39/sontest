@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CharacterController : MonoBehaviour
@@ -15,6 +16,9 @@ public class CharacterController : MonoBehaviour
     public float attackCooldown = 1.0f;
     public int attackDamage = 10;
     //saldýrý 2
+    public Transform bulletSpawnPoint;
+    public GameObject bulletPrefab;
+    public float bulletSpeed = 10;
     private int remainingJumps; // tekrarlanabilir zýplama
     private bool isGrounded = false;
     private Rigidbody2D rb;
@@ -31,7 +35,7 @@ public class CharacterController : MonoBehaviour
     }
     private void Update()
     {
-        
+       
         if (canAttack && Input.GetMouseButtonDown(0))//kýlýç vurma
         {
             Attack1(); //attack 1 fonksiyonu çaðýrýr
@@ -113,6 +117,7 @@ public class CharacterController : MonoBehaviour
        
 
     }
+   
     void OnTriggerEnter2D(Collider2D other)
     {
         if (swordCollider.activeSelf && other.CompareTag("enemy"))
@@ -121,6 +126,7 @@ public class CharacterController : MonoBehaviour
             // Kýlýç aktifken ve düþmanla temas durumunda burada hasar verme veya diðer iþlemleri gerçekleþtirin.
             // Örnek olarak, other.GetComponent<EnemyController>().TakeDamage(attackDamage);
         }
+       
     }
     
 }
