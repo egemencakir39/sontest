@@ -14,6 +14,7 @@ public class CharacterController : MonoBehaviour
     public GameObject swordCollider;//kýlýç colldier
     public float attackCooldown = 1.0f;
     public int attackDamage = 10;
+    //saldýrý 2
     private int remainingJumps; // tekrarlanabilir zýplama
     private bool isGrounded = false;
     private Rigidbody2D rb;
@@ -21,23 +22,19 @@ public class CharacterController : MonoBehaviour
     private bool canDash = true;
     private bool isDashing;
     private bool canAttack = true;
-    [SerializeField] private TrailRenderer tr;
-    
-    
-
-    private void Start()
+    [SerializeField] private TrailRenderer tr;      
+   private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
-        
         remainingJumps = extraJumps;
     }
-
     private void Update()
     {
-        if (canAttack && Input.GetMouseButtonDown(0))
+        
+        if (canAttack && Input.GetMouseButtonDown(0))//kýlýç vurma
         {
-            Attack1();
+            Attack1(); //attack 1 fonksiyonu çaðýrýr
         }
 
         flipface();
@@ -86,7 +83,7 @@ public class CharacterController : MonoBehaviour
         }
         transform.localScale = GeciciScale;
     }
-    private IEnumerator Dash() //dash donksiyonu
+    private IEnumerator Dash() //dash fonksiyonu
     {
         canDash = false;
         isDashing = true;
@@ -101,11 +98,10 @@ public class CharacterController : MonoBehaviour
         yield return new WaitForSeconds(dashingCoolDown);
         canDash = true;
     }
-    void Attack1()
+    void Attack1() //sword mekaniði
     {
         canAttack = false;
-        swordCollider.SetActive(true);
-        // Kýlýç animasyonunu oynatabilirsiniz.
+        swordCollider.SetActive(true);       
         StartCoroutine(ResetAttack());
     }
     IEnumerator ResetAttack()
@@ -114,7 +110,7 @@ public class CharacterController : MonoBehaviour
         canAttack = true;
         swordCollider.SetActive(false);
        // chainCollider.SetActive(false);
-        // Saldýrý animasyonlarýný sonlandýrabilirsiniz.
+       
 
     }
     void OnTriggerEnter2D(Collider2D other)
@@ -126,4 +122,5 @@ public class CharacterController : MonoBehaviour
             // Örnek olarak, other.GetComponent<EnemyController>().TakeDamage(attackDamage);
         }
     }
+    
 }
