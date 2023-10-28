@@ -9,13 +9,18 @@ public class CharacterController : MonoBehaviour
     public int extraJumps = 1; // Çift zýplama hakký
     public float dashingPower = 24f; // dash gücü
     public float dashingTime = 0.2f; // dash süresi
-    public float dashingCoolDown = 1f; 
+    public float dashingCoolDown = 1f;
+    //saldýrý
+    public GameObject swordCollider;//kýlýç colldier
+    public float attackCooldown = 1.0f;
+    public int attackDamage = 10;
     private int remainingJumps; // tekrarlanabilir zýplama
     private bool isGrounded = false;
     private Rigidbody2D rb;
     private Collider2D col;
     private bool canDash = true;
     private bool isDashing;
+    private bool canAttack = true;
     [SerializeField] private TrailRenderer tr;
     
     
@@ -30,7 +35,11 @@ public class CharacterController : MonoBehaviour
 
     private void Update()
     {
-       
+        if (canAttack && Input.GetMouseButtonDown(0))
+        {
+            Attack1();
+        }
+
         flipface();
         // zemin temas kontrolü
         isGrounded = Physics2D.IsTouchingLayers(col, LayerMask.GetMask("Ground"));
@@ -91,5 +100,30 @@ public class CharacterController : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCoolDown);
         canDash = true;
+    }
+    void Attack1()
+    {
+        canAttack = false;
+        swordCollider.SetActive(true);
+        // Kýlýç animasyonunu oynatabilirsiniz.
+        StartCoroutine(ResetAttack());
+    }
+    IEnumerator ResetAttack()
+    {
+        yield return new WaitForSeconds(attackCooldown);
+        canAttack = true;
+        swordCollider.SetActive(false);
+       // chainCollider.SetActive(false);
+        // Saldýrý animasyonlarýný sonlandýrabilirsiniz.
+
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (swordCollider.activeSelf && other.CompareTag("enemy"))
+        {
+            Debug.Log("Deðdi");
+            // Kýlýç aktifken ve düþmanla temas durumunda burada hasar verme veya diðer iþlemleri gerçekleþtirin.
+            // Örnek olarak, other.GetComponent<EnemyController>().TakeDamage(attackDamage);
+        }
     }
 }
