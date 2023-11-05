@@ -630,10 +630,10 @@ MonoBehaviour:
   swordCollider: {fileID: 1298819535}
   attackCooldown: 1
   attackDamage: 10
-  bulletSpawnPoint: {fileID: 2146982165}
-  bulletPrefab: {fileID: 8637188828763002604, guid: 7aa644eb291e05e43a0dfb1fcc3edce7, type: 3}
-  bulletSpeed: 10
   tr: {fileID: 1025502419}
+  bulletPrefab: {fileID: 972345292536281515, guid: b020fe888a85c294ba227bbf2578674c, type: 3}
+  firePoint: {fileID: 2146982165}
+  BulletSpeed: 100
 --- !u!96 &1025502419
 TrailRenderer:
   serializedVersion: 2
@@ -1034,7 +1034,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2146982165}
   m_Layer: 6
-  m_Name: BulletPos
+  m_Name: firePoint
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

@@ -16,9 +16,6 @@ public class CharacterController : MonoBehaviour
     public float attackCooldown = 1.0f;
     public int attackDamage = 10;
     //saldýrý 2
-    public Transform bulletSpawnPoint;
-    public GameObject bulletPrefab;
-    public float bulletSpeed = 10;
     private int remainingJumps; // tekrarlanabilir zýplama
     private bool isGrounded = false;
     private Rigidbody2D rb;
@@ -26,8 +23,12 @@ public class CharacterController : MonoBehaviour
     private bool canDash = true;
     private bool isDashing;
     private bool canAttack = true;
-    [SerializeField] private TrailRenderer tr;      
-   private void Start()
+    [SerializeField] private TrailRenderer tr;
+    // attack 2
+    public GameObject bulletPrefab; // Mermi prefabýný atayabileceðiniz bir alan
+    public Transform firePoint;
+    public float BulletSpeed = 100f;
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
@@ -35,7 +36,7 @@ public class CharacterController : MonoBehaviour
     }
     private void Update()
     {
-       
+
         if (canAttack && Input.GetMouseButtonDown(0))//kýlýç vurma
         {
             Attack1(); //attack 1 fonksiyonu çaðýrýr
@@ -60,6 +61,10 @@ public class CharacterController : MonoBehaviour
         {
             StartCoroutine(Dash());
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Attack2();
+        }
     }
 
     private void FixedUpdate()
@@ -71,19 +76,20 @@ public class CharacterController : MonoBehaviour
         // Karakter hareketi
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
-        
-        
+
+
     }
-     void flipface() // karakterin yüzünü döndürme
+
+    void flipface() // karakterin yüzünü döndürme
     {
-       Vector2 GeciciScale = transform.localScale;
-        if (rb.velocity.x>0)
+        Vector2 GeciciScale = transform.localScale;
+        if (rb.velocity.x > 0)
         {
-            GeciciScale.x = 10f;
+            GeciciScale.x = Mathf.Abs(GeciciScale.x); // Pozitif ölçek (saða bakýyor)
         }
-        else if (rb.velocity.x<0)
+        else if (rb.velocity.x < 0)
         {
-            GeciciScale.x = -10f;
+            GeciciScale.x = -Mathf.Abs(GeciciScale.x); // Negatif ölçek (sola bakýyor)
         }
         transform.localScale = GeciciScale;
     }
@@ -105,7 +111,7 @@ public class CharacterController : MonoBehaviour
     void Attack1() //sword mekaniði
     {
         canAttack = false;
-        swordCollider.SetActive(true);       
+        swordCollider.SetActive(true);
         StartCoroutine(ResetAttack());
     }
     IEnumerator ResetAttack()
@@ -113,11 +119,11 @@ public class CharacterController : MonoBehaviour
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
         swordCollider.SetActive(false);
-       // chainCollider.SetActive(false);
-       
+        // chainCollider.SetActive(false);
+
 
     }
-   
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (swordCollider.activeSelf && other.CompareTag("enemy"))
@@ -126,7 +132,19 @@ public class CharacterController : MonoBehaviour
             // Kýlýç aktifken ve düþmanla temas durumunda burada hasar verme veya diðer iþlemleri gerçekleþtirin.
             // Örnek olarak, other.GetComponent<EnemyController>().TakeDamage(attackDamage);
         }
-       
+
     }
-    
+    void Attack2() // Mermi atma
+    {
+        // Mermi örneðini oluþturun
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        if (transform.localScale.x > 0)
+        {
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(BulletSpeed, 0f); // Saða doðru atýþ
+        }
+        else
+        {
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-BulletSpeed, 0f); // Sola doðru atýþ
+        }
+    }
 }
