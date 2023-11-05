@@ -28,6 +28,7 @@ public class CharacterController : MonoBehaviour
     public GameObject bulletPrefab; // Mermi prefabýný atayabileceðiniz bir alan
     public Transform firePoint;
     public float BulletSpeed = 100f;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -132,7 +133,7 @@ public class CharacterController : MonoBehaviour
             // Kýlýç aktifken ve düþmanla temas durumunda burada hasar verme veya diðer iþlemleri gerçekleþtirin.
             // Örnek olarak, other.GetComponent<EnemyController>().TakeDamage(attackDamage);
         }
-
+       
     }
     void Attack2() // Mermi atma
     {
@@ -146,5 +147,7 @@ public class CharacterController : MonoBehaviour
         {
             bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-BulletSpeed, 0f); // Sola doðru atýþ
         }
+
     }
+
 }

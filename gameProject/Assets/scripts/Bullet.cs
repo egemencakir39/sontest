@@ -2,14 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class bullet : MonoBehaviour
 {
-    public float speed = 20f;
-    public Rigidbody2D rb;
-    void Start()
+    public float life = 3;
+    public GameObject bulletPrefab;
+    void Awake()
     {
-        rb.velocity = transform.right * speed;
+     Destroy(gameObject, life);   
     }
-  
-
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (bulletPrefab.activeSelf && other.CompareTag("enemy"))
+        {
+            Debug.Log("Deðdi mermi");
+            Destroy(gameObject);
+        }
+    }
 }
