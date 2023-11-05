@@ -494,7 +494,6 @@ GameObject:
   - component: {fileID: 1025502416}
   - component: {fileID: 1025502415}
   - component: {fileID: 1025502414}
-  - component: {fileID: 1025502420}
   - component: {fileID: 1025502418}
   - component: {fileID: 1025502419}
   m_Layer: 6
@@ -632,7 +631,7 @@ MonoBehaviour:
   attackCooldown: 1
   attackDamage: 10
   tr: {fileID: 1025502419}
-  bulletPrefab: {fileID: 3098016333627026513, guid: 5407ddf231dec7845a2b792206b547f7, type: 3}
+  bulletPrefab: {fileID: 7919644854715268757, guid: b020fe888a85c294ba227bbf2578674c, type: 3}
   firePoint: {fileID: 2146982165}
   BulletSpeed: 10
 --- !u!96 &1025502419
@@ -743,21 +742,6 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 0
---- !u!114 &1025502420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025502413}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f51b82662d7ac54baabbe25258f70bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 3098016333627026513, guid: 5407ddf231dec7845a2b792206b547f7, type: 3}
-  firePoint: {fileID: 2146982165}
-  BulletSpeed: 10
 --- !u!1 &1075742013
 GameObject:
   m_ObjectHideFlags: 0

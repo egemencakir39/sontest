@@ -4,31 +4,18 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    public GameObject bulletPrefab; // Mermi prefabýný atayabileceðiniz bir alan
-    public Transform firePoint;
-    public float BulletSpeed = 100f;
-
-    // Update is called once per frame
-    void Update()
+    public float life = 3;
+    public GameObject bulletPrefab;
+    void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        Destroy(gameObject, life);
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (bulletPrefab.activeSelf && other.CompareTag("enemy"))
         {
-            Attack2();
+            Debug.Log("Deðdi mermi");
+            Destroy(gameObject);
         }
     }
-    void Attack2() // Mermi atma
-    {
-        // Mermi örneðini oluþturun
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-        if (transform.localScale.x > 0)
-        {
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(BulletSpeed, 0f); // Saða doðru atýþ
-        }
-        else
-        {
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-BulletSpeed, 0f); // Sola doðru atýþ
-        }
-        
-    }
-    
 }
