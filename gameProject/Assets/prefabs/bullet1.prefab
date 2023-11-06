@@ -127,6 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 3
   bulletPrefab: {fileID: 7919644854715268757}
+  attack2Damage: 15
 --- !u!50 &6644543976786341530
 Rigidbody2D:
   serializedVersion: 4

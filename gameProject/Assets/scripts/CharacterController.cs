@@ -15,7 +15,6 @@ public class CharacterController : MonoBehaviour
     public GameObject swordCollider;//kýlýç colldier
     public float attackCooldown = 1.0f;
     public int attackDamage = 10;
-    //saldýrý 2
     private int remainingJumps; // tekrarlanabilir zýplama
     private bool isGrounded = false;
     private Rigidbody2D rb;
@@ -28,6 +27,7 @@ public class CharacterController : MonoBehaviour
     public GameObject bulletPrefab; // Mermi prefabýný atayabileceðiniz bir alan
     public Transform firePoint;
     public float BulletSpeed = 100f;
+    public static int playerScore = 0;
 
     private void Start()
     {
@@ -62,7 +62,7 @@ public class CharacterController : MonoBehaviour
         {
             StartCoroutine(Dash());
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && playerScore >= 5)
         {
             Attack2();
         }
@@ -129,11 +129,9 @@ public class CharacterController : MonoBehaviour
     {
         if (swordCollider.activeSelf && other.CompareTag("enemy"))
         {
-            Debug.Log("Deðdi");
             // Kýlýç aktifken ve düþmanla temas durumunda burada hasar verme veya diðer iþlemleri gerçekleþtirin.
-            // Örnek olarak, other.GetComponent<EnemyController>().TakeDamage(attackDamage);
+            other.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
         }
-       
     }
     void Attack2() // Mermi atma
     {

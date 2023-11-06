@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    public float life = 3;
+    public float life = 2;
     public GameObject bulletPrefab;
+    public int attack2Damage = 15;
     void Awake()
     {
         Destroy(gameObject, life);
@@ -14,7 +15,7 @@ public class BulletController : MonoBehaviour
     {
         if (bulletPrefab.activeSelf && other.CompareTag("enemy"))
         {
-            Debug.Log("Deðdi mermi");
+            other.GetComponent<EnemyHealth>().TakeDamage(attack2Damage);
             Destroy(gameObject);
         }
     }
