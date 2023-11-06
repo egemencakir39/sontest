@@ -16,7 +16,7 @@ public class BulletController : MonoBehaviour
         if (bulletPrefab.activeSelf && other.CompareTag("enemy"))
         {
             other.GetComponent<EnemyHealth>().TakeDamage(attack2Damage);
-            Destroy(gameObject);
+            Destroy(gameObject);          
         }
     }
 }
