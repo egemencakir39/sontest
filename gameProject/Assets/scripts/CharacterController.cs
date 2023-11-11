@@ -14,6 +14,8 @@ public class CharacterController : MonoBehaviour
     //saldýrý
     public GameObject swordCollider;//kýlýç colldier
     public float attackCooldown = 1.0f;
+    public float firerate;
+    float nextfire;
     public int attackDamage = 10;
     private int remainingJumps; // tekrarlanabilir zýplama
     private bool isGrounded = false;
@@ -46,7 +48,6 @@ public class CharacterController : MonoBehaviour
         flipface();
         // zemin temas kontrolü
         isGrounded = Physics2D.IsTouchingLayers(col, LayerMask.GetMask("Ground"));
-
         // Zýplama
         if (isGrounded)
         {
@@ -67,7 +68,6 @@ public class CharacterController : MonoBehaviour
             Attack2();
         }
     }
-
     private void FixedUpdate()
     {
         if (isDashing)
@@ -77,8 +77,6 @@ public class CharacterController : MonoBehaviour
         // Karakter hareketi
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
-
-
     }
 
     void flipface() // karakterin yüzünü döndürme
@@ -111,9 +109,16 @@ public class CharacterController : MonoBehaviour
     }
     void Attack1() //sword mekaniði
     {
-        canAttack = false;
-        swordCollider.SetActive(true);
-        StartCoroutine(ResetAttack());
+        if(Time.time > nextfire)
+        {
+            nextfire = Time.time + firerate;
+            if (canAttack)
+            {
+                canAttack = false;
+                swordCollider.SetActive(true);
+                StartCoroutine(ResetAttack());
+            }
+        }                
     }
     IEnumerator ResetAttack()
     {

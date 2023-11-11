@@ -646,6 +646,7 @@ MonoBehaviour:
   dashingCoolDown: 1
   swordCollider: {fileID: 1298819535}
   attackCooldown: 0.5
+  firerate: 3
   attackDamage: 10
   tr: {fileID: 1025502419}
   bulletPrefab: {fileID: 7919644854715268757, guid: b020fe888a85c294ba227bbf2578674c, type: 3}
