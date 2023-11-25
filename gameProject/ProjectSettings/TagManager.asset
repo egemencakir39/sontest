@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - enemy
   - "kap\u0131"
+  - Item
   layers:
   - Default
   - TransparentFX

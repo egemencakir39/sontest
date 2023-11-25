@@ -29,7 +29,7 @@ public class CharacterController : MonoBehaviour
     public GameObject bulletPrefab; // Mermi prefabýný atayabileceðiniz bir alan
     public Transform firePoint;
     public float BulletSpeed = 100f;
-    public static int playerScore = 0;
+   [SerializeField] public static int playerScore = 0;
 
     private void Start()
     {

@@ -34,5 +34,14 @@ public class EnemyHealth : MonoBehaviour
         Instantiate(itemPrefab, transform.position, Quaternion.identity);
 
         Destroy(gameObject); // Düþman objesini yok edin
+
+    }
+    void OnTriggerEnter2d(Collider other)
+    {
+        if (other.gameObject == itemPrefab)
+        {
+            // Ölüm nesnesi ile çarpýþýldý
+            Destroy(gameObject); // Oyuncuyu sahneden sil
+        }
     }
 }

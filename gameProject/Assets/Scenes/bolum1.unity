@@ -357,7 +357,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &129970949
 GameObject:
@@ -373,6 +373,7 @@ GameObject:
   - component: {fileID: 129970950}
   - component: {fileID: 129970954}
   - component: {fileID: 129970955}
+  - component: {fileID: 129970956}
   m_Layer: 0
   m_Name: enemy
   m_TagString: enemy
@@ -525,6 +526,19 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   itemPrefab: {fileID: 8966563943597263660, guid: 8ee550ae1670e56448239314b2a2680f, type: 3}
+--- !u!114 &129970956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129970949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7730f852229984182c932fe884d5a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
 --- !u!1 &305417235
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,6 +959,7 @@ GameObject:
   - component: {fileID: 1025502423}
   - component: {fileID: 1025502422}
   - component: {fileID: 1025502421}
+  - component: {fileID: 1025502424}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1275,16 +1290,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.07479453
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.048542023
-        value: 0.0751133
+        value: 0.05405426
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1348,6 +1354,20 @@ MonoBehaviour:
   dj: {fileID: 1025502421}
   activationDistance: 5
   rb: {fileID: 1025502414}
+--- !u!114 &1025502424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025502413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be958b179fedd448bd27cf24a4631d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 80
 --- !u!1 &1075742013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,7 +1480,7 @@ Transform:
   - {fileID: 1671087701}
   - {fileID: 785628760}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!251 &1075742017
 PlatformEffector2D:
@@ -1975,7 +1995,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1585059476
 GameObject:
@@ -2086,7 +2106,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1671087700
 GameObject:
