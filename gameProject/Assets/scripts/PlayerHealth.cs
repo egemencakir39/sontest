@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerHealth : MonoBehaviour
@@ -10,15 +11,23 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        // PlayerPrefs'ten kaydedilmiþ saðlýk deðerini al
-        if (PlayerPrefs.HasKey("PlayerHealth"))
+        // Sahne 1 yüklendiðinde maxHealth ile currentHealth'i eþitle
+        if (SceneManager.GetActiveScene().name == "bolum1")
         {
-            currentHealth = PlayerPrefs.GetInt("PlayerHealth");
+            currentHealth = maxHealth;
         }
         else
         {
-            // Eðer daha önce bir deðer kaydedilmemiþse, baþlangýçta maksimum saðlýk deðeri ile baþla
-            currentHealth = Mathf.Clamp(maxHealth, 0, maxHealth);
+            // PlayerPrefs'ten kaydedilmiþ saðlýk deðerini al
+            if (PlayerPrefs.HasKey("PlayerHealth"))
+            {
+                currentHealth = PlayerPrefs.GetInt("PlayerHealth");
+            }
+            else
+            {
+                // Eðer daha önce bir deðer kaydedilmemiþse, baþlangýçta maksimum saðlýk deðeri ile baþla
+                currentHealth = Mathf.Clamp(maxHealth, 0, maxHealth);
+            }
         }
     }
 
