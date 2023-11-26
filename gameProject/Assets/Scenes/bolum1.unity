@@ -1480,6 +1480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 80
+  respawnPoint: {fileID: 103260688}
 --- !u!114 &1025502425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1492,8 +1493,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc122013507340d44b8c70e9d529451d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1025502417}
-  checkpoint: {fileID: 103260688}
 --- !u!1 &1075742013
 GameObject:
   m_ObjectHideFlags: 0

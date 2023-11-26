@@ -8,8 +8,9 @@ public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
+    public Transform respawnPoint;
 
-    
+
 
     private void Start()
     {
@@ -67,12 +68,23 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("Player Died");
 
         // Karakteri sil
-        Destroy(gameObject);
+        transform.position = respawnPoint.position;
+        currentHealth = maxHealth;
 
         // Karakteri checkpoint'ten yeniden baþlat
-        
+
     }
 
-    // Karakteri checkpoint'ten yeniden baþlatmak için kullanýlan fonksiyon
-   
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        // Karakter checkpoint'e temas ettiðinde respawnPoint'i güncelle
+        if (other.CompareTag("Checkpoint"))
+        {
+            ChekPointSystem checkpoint = other.GetComponent<ChekPointSystem>();
+            if (checkpoint != null && checkpoint.IsChecked())
+            {
+                respawnPoint = other.transform;
+            }
+        }
+    }
 }
