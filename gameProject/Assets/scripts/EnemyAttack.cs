@@ -15,11 +15,10 @@ public class EnemyAttack : MonoBehaviour
             PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
 
             // Eðer PlayerHealth scripti varsa ve oyuncunun saðlýðýna zarar verecek kadar saðlýk varsa
-            if (playerHealth != null && playerHealth.currentHealth > damageAmount)
-            {
+         
                 // Oyuncunun saðlýðýný azalt
-                playerHealth.UpdateHealth(-damageAmount);
-            }
+          playerHealth.UpdateHealth(-damageAmount);
+            
         }
     }
 }

@@ -9,6 +9,8 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
 
+    
+
     private void Start()
     {
         // Sahne 1 yüklendiðinde maxHealth ile currentHealth'i eþitle
@@ -49,5 +51,28 @@ public class PlayerHealth : MonoBehaviour
         // Saðlýk deðeri güncellendikten sonra PlayerPrefs'e kaydet
         PlayerPrefs.SetInt("PlayerHealth", currentHealth);
         PlayerPrefs.Save();
+
+        // Can 0'a düþerse karakteri öldür
+        if (currentHealth == 0)
+        {
+            Die();
+        }
     }
+
+    // Karakterin ölüm durumunu kontrol etmek için kullanýlan fonksiyon
+    private void Die()
+    {
+        // Burada karakterin ölme iþlemleri gerçekleþtirilebilir
+        // Örneðin, karakterin animasyonunu deðiþtir, oyunu durdur veya yeniden baþlat gibi iþlemler
+        Debug.Log("Player Died");
+
+        // Karakteri sil
+        Destroy(gameObject);
+
+        // Karakteri checkpoint'ten yeniden baþlat
+        
+    }
+
+    // Karakteri checkpoint'ten yeniden baþlatmak için kullanýlan fonksiyon
+   
 }
