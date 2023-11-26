@@ -8,6 +8,7 @@ TagManager:
   - enemy
   - "kap\u0131"
   - Item
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

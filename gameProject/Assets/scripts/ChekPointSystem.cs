@@ -4,18 +4,13 @@ using UnityEngine;
 
 public class ChekPointSystem : MonoBehaviour
 {
-    private bool isChecked = false;
-
-    void OnTriggerEnter2D(Collider2D other)
+    private Transform currentCheckPoint;
+    public void CheckPointChanger (Transform CheckPoint)
     {
-        if (other.CompareTag("Player"))
-        {
-            isChecked = true;
-        }
+        currentCheckPoint = CheckPoint;
     }
-
-    public bool IsChecked()
+    public Transform GetCurrentCheckpoint()
     {
-        return isChecked;
+        return currentCheckPoint;
     }
 }

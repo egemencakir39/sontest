@@ -8,12 +8,14 @@ public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
-    public Transform respawnPoint;
+   // public Transform respawnPoint;
+    private ChekPointSystem cp;
 
 
 
     private void Start()
     {
+        cp = gameObject.GetComponent<ChekPointSystem>();
         // Sahne 1 yüklendiðinde maxHealth ile currentHealth'i eþitle
         if (SceneManager.GetActiveScene().name == "bolum1")
         {
@@ -56,35 +58,25 @@ public class PlayerHealth : MonoBehaviour
         // Can 0'a düþerse karakteri öldür
         if (currentHealth == 0)
         {
-            Die();
+            die();
         }
     }
 
     // Karakterin ölüm durumunu kontrol etmek için kullanýlan fonksiyon
-    private void Die()
+   
+    private void die()
     {
-        // Burada karakterin ölme iþlemleri gerçekleþtirilebilir
-        // Örneðin, karakterin animasyonunu deðiþtir, oyunu durdur veya yeniden baþlat gibi iþlemler
-        Debug.Log("Player Died");
-
-        // Karakteri sil
-        transform.position = respawnPoint.position;
+       // yield return new WaitForSeconds(2);
         currentHealth = maxHealth;
-
-        // Karakteri checkpoint'ten yeniden baþlat
-
+        Debug.Log("Player Died");
+        gameObject.transform.position = cp.GetCurrentCheckpoint().position;
     }
-
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Karakter checkpoint'e temas ettiðinde respawnPoint'i güncelle
-        if (other.CompareTag("Checkpoint"))
+        if (collision.gameObject.CompareTag("Checkpoint"))
         {
-            ChekPointSystem checkpoint = other.GetComponent<ChekPointSystem>();
-            if (checkpoint != null && checkpoint.IsChecked())
-            {
-                respawnPoint = other.transform;
-            }
+            cp.CheckPointChanger(collision.gameObject.transform);
         }
     }
+
 }

@@ -245,10 +245,9 @@ GameObject:
   - component: {fileID: 103260688}
   - component: {fileID: 103260687}
   - component: {fileID: 103260686}
-  - component: {fileID: 103260689}
   m_Layer: 0
   m_Name: checkpoint
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -346,18 +345,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &103260689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103260685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc122013507340d44b8c70e9d529451d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &121712611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,6 +1071,7 @@ GameObject:
   - component: {fileID: 1025502422}
   - component: {fileID: 1025502421}
   - component: {fileID: 1025502424}
+  - component: {fileID: 1025502425}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1492,7 +1480,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 80
-  respawnPoint: {fileID: 103260688}
+--- !u!114 &1025502425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025502413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc122013507340d44b8c70e9d529451d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1075742013
 GameObject:
   m_ObjectHideFlags: 0
