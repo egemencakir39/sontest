@@ -9,6 +9,7 @@ TagManager:
   - "kap\u0131"
   - Item
   - Checkpoint
+  - Ladder
   layers:
   - Default
   - TransparentFX
