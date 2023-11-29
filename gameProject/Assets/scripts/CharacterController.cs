@@ -117,6 +117,7 @@ public class CharacterController : MonoBehaviour
                 canAttack = false;
                 swordCollider.SetActive(true);
                 StartCoroutine(ResetAttack());
+                
             }
         }                
     }
