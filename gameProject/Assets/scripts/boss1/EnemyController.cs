@@ -9,7 +9,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float enemySpeed = 2f;
     [SerializeField] private float trackingSpeed = 4f;
     [SerializeField] private float attackDistance = 5f;
-    [SerializeField] private float attackCooldown = 0.5f;
+    [SerializeField] private float attackCooldown = 2f;
     public GameObject enemyBullet;
     public Transform firePoint;
 
@@ -49,7 +49,7 @@ public class EnemyController : MonoBehaviour
 
                 if (areaBounds.Contains(player.position))
                 {
-                    // eðer player belirlenen alandaysa, player'ý takip et
+                    // eðer player belirlenen alandaysa playerý takip et
                     transform.position = Vector2.MoveTowards(transform.position, player.position, trackingSpeed * Time.deltaTime);
                 }
                 else
