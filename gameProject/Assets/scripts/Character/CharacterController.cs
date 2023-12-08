@@ -30,6 +30,9 @@ public class CharacterController : MonoBehaviour
     public Transform firePoint;
     public float BulletSpeed = 100f;
    [SerializeField] public static int playerScore = 0;
+    
+
+
 
     private void Start()
     {
@@ -66,6 +69,7 @@ public class CharacterController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && playerScore >= 5)
         {
             Attack2();
+            
         }
     }
     private void FixedUpdate()
@@ -130,6 +134,7 @@ public class CharacterController : MonoBehaviour
 
 
     }
+    
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -138,9 +143,12 @@ public class CharacterController : MonoBehaviour
             // Kýlýç aktifken ve düþmanla temas durumunda burada hasar verme veya diðer iþlemleri gerçekleþtirin.
             other.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
         }
+       
     }
-    void Attack2() // Mermi atma
+
+        void Attack2() // Mermi atma
     {
+
         // Mermi örneðini oluþturun
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         if (transform.localScale.x > 0)
@@ -151,7 +159,7 @@ public class CharacterController : MonoBehaviour
         {
             bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-BulletSpeed, 0f); // Sola doðru atýþ
         }
-
+        
     }
 
 }

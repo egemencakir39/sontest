@@ -125,8 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f51b82662d7ac54baabbe25258f70bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 3
+  life: 2.09
   bulletPrefab: {fileID: 7919644854715268757}
+  cooldownTime: 7.88
   attack2Damage: 15
 --- !u!50 &6644543976786341530
 Rigidbody2D:
