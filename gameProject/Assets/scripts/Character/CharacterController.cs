@@ -11,12 +11,13 @@ public class CharacterController : MonoBehaviour
     public float dashingPower = 24f; // dash gücü
     public float dashingTime = 0.2f; // dash süresi
     public float dashingCoolDown = 1f;
-    //saldýrý
+    //saldýrý 1
     public GameObject swordCollider;//kýlýç colldier
     public float attackCooldown = 1.0f;
     public float firerate;
     float nextfire;
     public int attackDamage = 10;
+    //zýplama
     private int remainingJumps; // tekrarlanabilir zýplama
     private bool isGrounded = false;
     private Rigidbody2D rb;
@@ -29,7 +30,9 @@ public class CharacterController : MonoBehaviour
     public GameObject bulletPrefab; // Mermi prefabýný atayabileceðiniz bir alan
     public Transform firePoint;
     public float BulletSpeed = 100f;
-   [SerializeField] public static int playerScore = 0;
+    public float fireRateAttack2;
+    float nextFireAttack2;
+    [SerializeField] public static int playerScore = 0;
     
 
 
@@ -149,16 +152,20 @@ public class CharacterController : MonoBehaviour
         void Attack2() // Mermi atma
     {
 
-        // Mermi örneðini oluþturun
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-        if (transform.localScale.x > 0)
+         if (Time.time > nextFireAttack2)
         {
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(BulletSpeed, 0f); // Saða doðru atýþ
+            nextFireAttack2 = Time.time + fireRateAttack2;
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+            if (transform.localScale.x > 0)
+            {
+                bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(BulletSpeed, 0f); // Saða doðru atýþ
+            }
+            else
+            {
+                bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-BulletSpeed, 0f); // Sola doðru atýþ
+            }
         }
-        else
-        {
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-BulletSpeed, 0f); // Sola doðru atýþ
-        }
+        
         
     }
 

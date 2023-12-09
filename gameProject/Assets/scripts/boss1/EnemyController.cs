@@ -91,16 +91,21 @@ public class EnemyController : MonoBehaviour
     {
         isAttacking = true;
 
-        yield return new WaitForSeconds(attackCooldown);
-
-        if (enemyBullet != null && firePoint != null)
+        try
         {
-            GameObject fire = Instantiate(enemyBullet, firePoint.position, Quaternion.identity);
-            Vector2 direction = (player.position - firePoint.position).normalized;
-            fire.GetComponent<Rigidbody2D>().velocity = direction * 10f;
-        }
+            yield return new WaitForSeconds(attackCooldown);
 
-        isAttacking = false;
+            if (enemyBullet != null && firePoint != null)
+            {
+                GameObject fire = Instantiate(enemyBullet, firePoint.position, Quaternion.identity);
+                Vector2 direction = (player.position - firePoint.position).normalized;
+                fire.GetComponent<Rigidbody2D>().velocity = direction * 10f;
+            }
+        }
+        finally
+        {
+            isAttacking = false;
+        }
     }
 
     void ChangeTarget()
