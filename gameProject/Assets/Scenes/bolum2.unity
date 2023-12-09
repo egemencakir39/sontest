@@ -329,7 +329,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0.34487247, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -936,7 +936,6 @@ MonoBehaviour:
   lr: {fileID: 1182869042}
   dj: {fileID: 1182869041}
   activationDistance: 5
-  rb: {fileID: 1182869047}
 --- !u!114 &1182869044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1083,6 +1082,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7919644854715268757, guid: b020fe888a85c294ba227bbf2578674c, type: 3}
   firePoint: {fileID: 2004674321}
   BulletSpeed: 10
+  fireRateAttack2: 0.64
 --- !u!50 &1182869047
 Rigidbody2D:
   serializedVersion: 4
