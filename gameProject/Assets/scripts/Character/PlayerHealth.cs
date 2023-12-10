@@ -2,35 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class PlayerHealth : MonoBehaviour
 {
+   
     public int maxHealth = 100;
     public int currentHealth;
    // public Transform respawnPoint;
     private ChekPointSystem cp;
+    public healthBar healthBar;
+   
 
 
 
     private void Start()
     {
         cp = gameObject.GetComponent<ChekPointSystem>();
-        // Sahne 1 yüklendiðinde maxHealth ile currentHealth'i eþitle
-        if (SceneManager.GetActiveScene().name == "bolum1")
+        // sahne yüklendiðinde maxHealth ile currentHealthi eþitle
+        if (SceneManager.GetActiveScene().name == "bolum1") 
         {
             currentHealth = maxHealth;
+            healthBar.SetMaxHealth(maxHealth);
         }
         else
         {
-            // PlayerPrefs'ten kaydedilmiþ saðlýk deðerini al
+            // kaydedilmiþ deðeri çek
             if (PlayerPrefs.HasKey("PlayerHealth"))
             {
                 currentHealth = PlayerPrefs.GetInt("PlayerHealth");
             }
             else
             {
-                // Eðer daha önce bir deðer kaydedilmemiþse, baþlangýçta maksimum saðlýk deðeri ile baþla
+                // baslangýc deðeri
                 currentHealth = Mathf.Clamp(maxHealth, 0, maxHealth);
             }
         }
@@ -38,20 +43,21 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnDisable()
     {
-        // Sahneden çýkýldýðýnda PlayerPrefs'e güncel saðlýk deðerini kaydet
+        //health save
         PlayerPrefs.SetInt("PlayerHealth", currentHealth);
         PlayerPrefs.Save();
     }
 
-    // Saðlýk deðerini güncellemek için kullanýlan fonksiyon
+    // health güncelle
     public void UpdateHealth(int amount)
     {
         currentHealth += amount;
+        healthBar.SetHealth(currentHealth);
 
-        // Saðlýk deðerini maksimum saðlýk deðeri arasýnda sýnýrla
+        // max saðlýða sýnýrla
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
-        // Saðlýk deðeri güncellendikten sonra PlayerPrefs'e kaydet
+        // saðlýk deðeri update
         PlayerPrefs.SetInt("PlayerHealth", currentHealth);
         PlayerPrefs.Save();
 
@@ -61,9 +67,6 @@ public class PlayerHealth : MonoBehaviour
             die();
         }
     }
-
-    // Karakterin ölüm durumunu kontrol etmek için kullanýlan fonksiyon
-   
     private void die()
     {
        // yield return new WaitForSeconds(2);
@@ -78,5 +81,6 @@ public class PlayerHealth : MonoBehaviour
             cp.CheckPointChanger(collision.gameObject.transform);
         }
     }
+   
 
 }
