@@ -66,6 +66,7 @@ public class PlayerHealth : MonoBehaviour
         {
             die();
         }
+        healthBar.SetHealth(currentHealth);
     }
     private void die()
     {
