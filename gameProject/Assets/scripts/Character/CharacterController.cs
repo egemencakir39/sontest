@@ -33,7 +33,8 @@ public class CharacterController : MonoBehaviour
     public float fireRateAttack2;
     float nextFireAttack2;
     [SerializeField] public static int playerScore = 0;
-    
+    Animator animator;
+
 
 
 
@@ -42,6 +43,7 @@ public class CharacterController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         remainingJumps = extraJumps;
+        animator = GetComponent<Animator>();
     }
     private void Update()
     {
@@ -52,6 +54,7 @@ public class CharacterController : MonoBehaviour
         }
 
         flipface();
+
         // zemin temas kontrolü
         isGrounded = Physics2D.IsTouchingLayers(col, LayerMask.GetMask("Ground"));
         // Zýplama
@@ -62,6 +65,7 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && (isGrounded || remainingJumps > 0))
         {
+            animator.SetTrigger("JumpAnim");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             remainingJumps--;
         }
@@ -74,6 +78,8 @@ public class CharacterController : MonoBehaviour
             Attack2();
             
         }
+       
+
     }
     private void FixedUpdate()
     {
@@ -84,6 +90,14 @@ public class CharacterController : MonoBehaviour
         // Karakter hareketi
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
+        if (horizontalInput != 0)
+        {
+            animator.SetBool("RunAnim", true);
+        }
+        else
+        {
+            animator.SetBool("RunAnim", false);
+        }
     }
 
     void flipface() // karakterin yüzünü döndürme
@@ -126,7 +140,8 @@ public class CharacterController : MonoBehaviour
                 StartCoroutine(ResetAttack());
                 
             }
-        }                
+        }
+        animator.SetTrigger("attack1");
     }
     IEnumerator ResetAttack()
     {
