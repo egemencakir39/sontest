@@ -5,20 +5,20 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    public float moveSpeed = 5f; // hareket hýzý
-    public float jumpForce = 10f; // zýplama gücü
-    public int extraJumps = 1; // Çift zýplama hakký
-    public float dashingPower = 24f; // dash gücü
-    public float dashingTime = 0.2f; // dash süresi
+    public float moveSpeed = 5f; 
+    public float jumpForce = 10f; 
+    public int extraJumps = 1; 
+    public float dashingPower = 24f; 
+    public float dashingTime = 0.2f; 
     public float dashingCoolDown = 1f;
     //saldýrý 1
-    public GameObject swordCollider;//kýlýç colldier
+    public GameObject swordCollider;
     public float attackCooldown = 1.0f;
     public float firerate;
     float nextfire;
     public int attackDamage = 10;
     //zýplama
-    private int remainingJumps; // tekrarlanabilir zýplama
+    private int remainingJumps; 
     private bool isGrounded = false;
     private Rigidbody2D rb;
     private Collider2D col;
@@ -27,17 +27,13 @@ public class CharacterController : MonoBehaviour
     private bool canAttack = true;
     [SerializeField] private TrailRenderer tr;
     // attack 2
-    public GameObject bulletPrefab; // Mermi prefabýný atayabileceðiniz bir alan
+    public GameObject bulletPrefab; 
     public Transform firePoint;
     public float BulletSpeed = 100f;
     public float fireRateAttack2;
     float nextFireAttack2;
     [SerializeField] public static int playerScore = 0;
     Animator animator;
-
-
-
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -50,7 +46,7 @@ public class CharacterController : MonoBehaviour
 
         if (canAttack && Input.GetMouseButtonDown(0))//kýlýç vurma
         {
-            Attack1(); //attack 1 fonksiyonu çaðýrýr
+            Attack1(); 
         }
 
         flipface();
@@ -158,16 +154,16 @@ public class CharacterController : MonoBehaviour
     {
         if (swordCollider.activeSelf && other.CompareTag("enemy"))
         {
-            // Kýlýç aktifken ve düþmanla temas durumunda burada hasar verme veya diðer iþlemleri gerçekleþtirin.
+            
             other.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
         }
        
     }
 
-        void Attack2() // Mermi atma
+    void Attack2() // Mermi atma
     {
 
-         if (Time.time > nextFireAttack2)
+        if (Time.time > nextFireAttack2)
         {
             nextFireAttack2 = Time.time + fireRateAttack2;
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
@@ -183,5 +179,5 @@ public class CharacterController : MonoBehaviour
         
         
     }
-
+   
 }
