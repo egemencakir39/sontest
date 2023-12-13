@@ -32,7 +32,7 @@ public class CharacterController : MonoBehaviour
     public float BulletSpeed = 100f;
     public float fireRateAttack2;
     float nextFireAttack2;
-    [SerializeField] public static int playerScore = 0;
+    [SerializeField] public static int playerScore = 5;
     Animator animator;
     AudioSource audioSource;
     private bool isMoving = false;
@@ -77,7 +77,8 @@ public class CharacterController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E) && playerScore >= 5)
         {
-            Attack2();
+            animator.SetTrigger("attack2");
+            Invoke("Attack2",.7f);
             
         }
         
@@ -152,7 +153,7 @@ public class CharacterController : MonoBehaviour
                 canAttack = false;
                 swordCollider.SetActive(true);
                 StartCoroutine(ResetAttack());
-                
+                animator.SetTrigger("attack1");
             }
         }
         
@@ -193,7 +194,7 @@ public class CharacterController : MonoBehaviour
             {
                 bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-BulletSpeed, 0f); // Sola doðru atýþ
             }
-            animator.SetTrigger("attack1");
+            
         }
         
 

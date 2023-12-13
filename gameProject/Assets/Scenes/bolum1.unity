@@ -2652,7 +2652,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7919644854715268757, guid: b020fe888a85c294ba227bbf2578674c, type: 3}
   firePoint: {fileID: 2146982165}
   BulletSpeed: 10
-  fireRateAttack2: 1
+  fireRateAttack2: 0
 --- !u!96 &1025502419
 TrailRenderer:
   serializedVersion: 2
