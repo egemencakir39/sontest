@@ -34,12 +34,18 @@ public class CharacterController : MonoBehaviour
     float nextFireAttack2;
     [SerializeField] public static int playerScore = 0;
     Animator animator;
+    AudioSource audioSource;
+    private bool isMoving = false;
+   
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         remainingJumps = extraJumps;
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
+        
     }
     private void Update()
     {
@@ -89,10 +95,20 @@ public class CharacterController : MonoBehaviour
         if (horizontalInput != 0)
         {
             animator.SetBool("RunAnim", true);
+            if (!isMoving)
+            {
+                audioSource.Play();
+                isMoving = true; // karakter hareket ettiði durumu iþaretle
+            }
         }
         else
         {
             animator.SetBool("RunAnim", false);
+            if (isMoving)
+            {
+                audioSource.Stop();
+                isMoving = false; // karakter durduðu durumu iþaretle
+            }
         }
     }
 
@@ -117,6 +133,7 @@ public class CharacterController : MonoBehaviour
         rb.gravityScale = 0f;
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
         tr.emitting = true;
+        
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
         rb.gravityScale = originalGravity;
