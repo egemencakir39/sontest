@@ -80,6 +80,7 @@ public class CharacterController : MonoBehaviour
             Attack2();
             
         }
+        
        
 
     }
@@ -154,7 +155,7 @@ public class CharacterController : MonoBehaviour
                 
             }
         }
-        animator.SetTrigger("attack1");
+        
     }
     IEnumerator ResetAttack()
     {
@@ -192,9 +193,10 @@ public class CharacterController : MonoBehaviour
             {
                 bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-BulletSpeed, 0f); // Sola doðru atýþ
             }
+            animator.SetTrigger("attack1");
         }
         
-        
+
     }
    
 }
