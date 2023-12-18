@@ -28,6 +28,20 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    void UpdateFacingDirection(Vector2 targetPosition)
+    {
+        if (targetPosition.x > transform.position.x)
+        {
+            // Player saðda, yüzü saða baksýn
+            transform.localScale = new Vector3(3f, 3f, 3f);
+        }
+        else
+        {
+            // Player solda, yüzü sola baksýn
+            transform.localScale = new Vector3(-3f, 3f, 3f);
+        }
+    }
+
     IEnumerator EnemyBehaviour()
     {
         while (true)
@@ -38,6 +52,9 @@ public class EnemyController : MonoBehaviour
             {
                 StartCoroutine(AttackCooldown());
                 StartCoroutine(TrackPlayer());
+
+                // Yüzü doðru yöne çevir
+                UpdateFacingDirection(player.position);
             }
             else
             {
@@ -51,6 +68,9 @@ public class EnemyController : MonoBehaviour
                 {
                     // eðer player belirlenen alandaysa playerý takip et
                     transform.position = Vector2.MoveTowards(transform.position, player.position, trackingSpeed * Time.deltaTime);
+
+                    // Yüzü doðru yöne çevir
+                    UpdateFacingDirection(player.position);
                 }
                 else
                 {
@@ -61,6 +81,9 @@ public class EnemyController : MonoBehaviour
                     {
                         ChangeTarget();
                     }
+
+                    // Yüzü doðru yöne çevir
+                    UpdateFacingDirection(targetPoint.position);
                 }
             }
 
