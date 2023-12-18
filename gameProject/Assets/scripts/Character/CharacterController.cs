@@ -34,7 +34,12 @@ public class CharacterController : MonoBehaviour
     float nextFireAttack2;
     [SerializeField] public static int playerScore = 5;
     Animator animator;
-    AudioSource audioSource;
+    //sesler
+    public AudioSource Walk;
+    public AudioSource Dashs;
+    public AudioSource Jump;
+
+
     private bool isMoving = false;
     
 
@@ -45,7 +50,9 @@ public class CharacterController : MonoBehaviour
         col = GetComponent<Collider2D>();
         remainingJumps = extraJumps;
         animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
+        Walk = GetComponent<AudioSource>();
+        Jump = GetComponent<AudioSource>();
+        Dashs = GetComponent<AudioSource>();
 
     }
     private void Update()
@@ -71,10 +78,12 @@ public class CharacterController : MonoBehaviour
             animator.SetTrigger("JumpAnim");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             remainingJumps--;
+            Jump.Play();
         }
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash) //dash tuþ kontrolü
         {
             StartCoroutine(Dash());
+            Dashs.Play();
         }
         if (Input.GetKeyDown(KeyCode.E) && playerScore >= 5)
         {
@@ -101,7 +110,7 @@ public class CharacterController : MonoBehaviour
             animator.SetBool("RunAnim", true);
             if (!isMoving)
             {
-                audioSource.Play();
+                Walk.Play();
                 isMoving = true; // karakter hareket ettiði durumu iþaretle
             }
         }
@@ -110,7 +119,7 @@ public class CharacterController : MonoBehaviour
             animator.SetBool("RunAnim", false);
             if (isMoving)
             {
-                audioSource.Stop();
+                Walk.Stop();
                 isMoving = false; // karakter durduðu durumu iþaretle
             }
         }
