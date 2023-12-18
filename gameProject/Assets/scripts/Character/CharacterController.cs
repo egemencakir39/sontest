@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    public float moveSpeed = 5f; 
-    public float jumpForce = 10f; 
-    public int extraJumps = 1; 
-    public float dashingPower = 24f; 
-    public float dashingTime = 0.2f; 
+    public float moveSpeed = 5f;
+    public float jumpForce = 10f;
+    public int extraJumps = 1;
+    public float dashingPower = 24f;
+    public float dashingTime = 0.2f;
     public float dashingCoolDown = 1f;
     //saldýrý 1
     public GameObject swordCollider;
@@ -18,7 +18,7 @@ public class CharacterController : MonoBehaviour
     float nextfire;
     public int attackDamage = 10;
     //zýplama
-    private int remainingJumps; 
+    private int remainingJumps;
     private bool isGrounded = false;
     private Rigidbody2D rb;
     private Collider2D col;
@@ -27,7 +27,7 @@ public class CharacterController : MonoBehaviour
     private bool canAttack = true;
     [SerializeField] private TrailRenderer tr;
     // attack 2
-    public GameObject bulletPrefab; 
+    public GameObject bulletPrefab;
     public Transform firePoint;
     public float BulletSpeed = 100f;
     public float fireRateAttack2;
@@ -36,7 +36,8 @@ public class CharacterController : MonoBehaviour
     Animator animator;
     AudioSource audioSource;
     private bool isMoving = false;
-   
+    
+
 
     private void Start()
     {
@@ -45,14 +46,14 @@ public class CharacterController : MonoBehaviour
         remainingJumps = extraJumps;
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-        
+
     }
     private void Update()
     {
 
         if (canAttack && Input.GetMouseButtonDown(0))//kýlýç vurma
         {
-            Attack1(); 
+            Attack1();
         }
 
         flipface();
@@ -78,11 +79,11 @@ public class CharacterController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && playerScore >= 5)
         {
             animator.SetTrigger("attack2");
-            Invoke("Attack2",.7f);
-            
+            Invoke("Attack2", .7f);
+
         }
-        
-       
+
+
 
     }
     private void FixedUpdate()
@@ -91,6 +92,7 @@ public class CharacterController : MonoBehaviour
         {
             return;
         }
+
         // Karakter hareketi
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
@@ -135,7 +137,7 @@ public class CharacterController : MonoBehaviour
         rb.gravityScale = 0f;
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
         tr.emitting = true;
-        
+
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
         rb.gravityScale = originalGravity;
@@ -145,7 +147,7 @@ public class CharacterController : MonoBehaviour
     }
     void Attack1() //sword mekaniði
     {
-        if(Time.time > nextfire)
+        if (Time.time > nextfire)
         {
             nextfire = Time.time + firerate;
             if (canAttack)
@@ -156,7 +158,7 @@ public class CharacterController : MonoBehaviour
                 animator.SetTrigger("attack1");
             }
         }
-        
+
     }
     IEnumerator ResetAttack()
     {
@@ -167,16 +169,16 @@ public class CharacterController : MonoBehaviour
 
 
     }
-    
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (swordCollider.activeSelf && other.CompareTag("enemy"))
         {
-            
+
             other.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
         }
-       
+
     }
 
     void Attack2() // Mermi atma
@@ -194,10 +196,10 @@ public class CharacterController : MonoBehaviour
             {
                 bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-BulletSpeed, 0f); // Sola doðru atýþ
             }
-            
+
         }
-        
+
 
     }
-   
+
 }

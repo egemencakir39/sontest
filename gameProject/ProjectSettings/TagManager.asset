@@ -20,7 +20,7 @@ TagManager:
   - Player
   - enemy
   - ladder
-  - 
+  - BackGround
   - 
   - 
   - 
@@ -44,6 +44,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGorund
+    uniqueID: 679972893
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Layer
+    uniqueID: 2015627557
+    locked: 0
+  - name: obje
+    uniqueID: 2978369873
+    locked: 0
+  - name: Player
+    uniqueID: 2173625603
     locked: 0

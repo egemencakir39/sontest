@@ -8,16 +8,17 @@ public class EnemyAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Eðer temas eden nesne bir "Player" ise
+        
         if (other.CompareTag("Player"))
         {
-            // PlayerHealth scriptine eriþim saðla
+            
             PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
 
-            // Eðer PlayerHealth scripti varsa ve oyuncunun saðlýðýna zarar verecek kadar saðlýk varsa
-         
-                // Oyuncunun saðlýðýný azalt
-          playerHealth.UpdateHealth(-damageAmount);
+           
+
+
+
+            playerHealth.UpdateHealth(-damageAmount);
             
         }
     }
