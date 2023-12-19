@@ -41,6 +41,7 @@ public class CharacterController : MonoBehaviour
     
 
 
+
     private bool isMoving = false;
     
 
@@ -56,6 +57,7 @@ public class CharacterController : MonoBehaviour
     }
     private void Update()
     {
+       
 
         if (canAttack && Input.GetMouseButtonDown(0))//kýlýç vurma
         {
@@ -222,5 +224,5 @@ public class CharacterController : MonoBehaviour
 
 
     }
-
+   
 }

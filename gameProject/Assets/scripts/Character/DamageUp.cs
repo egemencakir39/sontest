@@ -8,8 +8,11 @@ public class DamageUp : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Destroy(gameObject);
+           
+            
         }
+        Destroy(gameObject);
     }
-    
+
+
 }
