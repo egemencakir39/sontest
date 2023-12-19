@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
+    soundManager SoundManagerScript;
+
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     public int extraJumps = 1;
@@ -34,10 +36,9 @@ public class CharacterController : MonoBehaviour
     float nextFireAttack2;
     [SerializeField] public static int playerScore = 5;
     Animator animator;
-    //sesler
-    public AudioSource Walk;
-    public AudioSource Dashs;
-    public AudioSource Jump;
+    //ses
+    AudioSource audioSource;
+    
 
 
     private bool isMoving = false;
@@ -50,10 +51,8 @@ public class CharacterController : MonoBehaviour
         col = GetComponent<Collider2D>();
         remainingJumps = extraJumps;
         animator = GetComponent<Animator>();
-        Walk = GetComponent<AudioSource>();
-        Jump = GetComponent<AudioSource>();
-        Dashs = GetComponent<AudioSource>();
-
+        SoundManagerScript = GameObject.Find("SoundManager").GetComponent<soundManager>();
+        audioSource = GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -67,7 +66,7 @@ public class CharacterController : MonoBehaviour
 
         // zemin temas kontrolü
         isGrounded = Physics2D.IsTouchingLayers(col, LayerMask.GetMask("Ground"));
-        // Zýplama
+        
         if (isGrounded)
         {
             remainingJumps = extraJumps;
@@ -75,15 +74,18 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && (isGrounded || remainingJumps > 0))
         {
+            audioSource.Stop();
             animator.SetTrigger("JumpAnim");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             remainingJumps--;
-            Jump.Play();
+            SoundManagerScript.Jump_();
+            
+            
         }
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash) //dash tuþ kontrolü
         {
             StartCoroutine(Dash());
-            Dashs.Play();
+            SoundManagerScript.Dash_();
         }
         if (Input.GetKeyDown(KeyCode.E) && playerScore >= 5)
         {
@@ -110,18 +112,20 @@ public class CharacterController : MonoBehaviour
             animator.SetBool("RunAnim", true);
             if (!isMoving)
             {
-                Walk.Play();
-                isMoving = true; // karakter hareket ettiði durumu iþaretle
+                audioSource.Play();
+               
             }
+            isMoving = true; // karakter hareket ettiði durumu iþaretle
         }
         else
         {
             animator.SetBool("RunAnim", false);
             if (isMoving)
             {
-                Walk.Stop();
-                isMoving = false; // karakter durduðu durumu iþaretle
+              
+                audioSource.Stop();
             }
+            isMoving = false; // karakter durduðu durumu iþaretle
         }
     }
 
@@ -146,13 +150,15 @@ public class CharacterController : MonoBehaviour
         rb.gravityScale = 0f;
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
         tr.emitting = true;
-
+        
+        
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
         rb.gravityScale = originalGravity;
         isDashing = false;
         yield return new WaitForSeconds(dashingCoolDown);
         canDash = true;
+        
     }
     void Attack1() //sword mekaniði
     {
@@ -187,8 +193,10 @@ public class CharacterController : MonoBehaviour
 
             other.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
         }
-
+       
     }
+  
+  
 
     void Attack2() // Mermi atma
     {
