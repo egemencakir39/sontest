@@ -74,7 +74,7 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && (isGrounded || remainingJumps > 0))
         {
-            audioSource.Stop();
+            
             animator.SetTrigger("JumpAnim");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             remainingJumps--;
@@ -93,6 +93,7 @@ public class CharacterController : MonoBehaviour
             Invoke("Attack2", .7f);
 
         }
+        
 
 
 
@@ -107,15 +108,17 @@ public class CharacterController : MonoBehaviour
         // Karakter hareketi
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
+
+       
         if (horizontalInput != 0)
         {
             animator.SetBool("RunAnim", true);
             if (!isMoving)
             {
                 audioSource.Play();
-               
+                isMoving = true;
             }
-            isMoving = true; // karakter hareket ettiði durumu iþaretle
+           
         }
         else
         {
@@ -124,8 +127,9 @@ public class CharacterController : MonoBehaviour
             {
               
                 audioSource.Stop();
+                isMoving = false;
             }
-            isMoving = false; // karakter durduðu durumu iþaretle
+          
         }
     }
 
