@@ -37,15 +37,19 @@ public class CharacterController : MonoBehaviour
     [SerializeField] public static int playerScore = 5;
     Animator animator;
     //ses
-    AudioSource audioSource;
-    public AudioClip[] footstepSounds;
-    private bool isPlayingFootstep = false;
+    private AudioSource audioSource;
+    
+    
+   
+
 
 
 
 
     private bool isMoving = false;
-    
+
+  
+
 
 
     private void Start()
@@ -56,24 +60,24 @@ public class CharacterController : MonoBehaviour
         animator = GetComponent<Animator>();
         SoundManagerScript = GameObject.Find("SoundManager").GetComponent<soundManager>();
         audioSource = GetComponent<AudioSource>();
-       
+
     }
     private void Update()
     {
-       
+
 
         if (canAttack && Input.GetMouseButtonDown(0))//kýlýç vurma
         {
             animator.SetTrigger("attack1");
             Attack1();
-            
+
         }
 
         flipface();
 
         // zemin temas kontrolü
         isGrounded = Physics2D.IsTouchingLayers(col, LayerMask.GetMask("Ground"));
-        
+
         if (isGrounded)
         {
             remainingJumps = extraJumps;
@@ -81,13 +85,13 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && (isGrounded || remainingJumps > 0))
         {
-            
+
             animator.SetTrigger("JumpAnim");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             remainingJumps--;
             SoundManagerScript.Jump_();
-            
-            
+
+
         }
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash) //dash tuþ kontrolü
         {
@@ -100,7 +104,7 @@ public class CharacterController : MonoBehaviour
             Invoke("Attack2", .7f);
 
         }
-        
+
 
 
 
@@ -116,27 +120,28 @@ public class CharacterController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
 
-       
+
         if (horizontalInput != 0)
         {
             animator.SetBool("RunAnim", true);
             if (!isMoving)
             {
-                PlayFootstepSound();
+              audioSource.Play();
                 isMoving = true;
+
             }
-           
+
         }
         else
         {
             animator.SetBool("RunAnim", false);
             if (isMoving)
             {
-              
-                StopFootstepSound();
+
+                audioSource.Stop();
                 isMoving = false;
             }
-          
+
         }
     }
 
@@ -161,30 +166,30 @@ public class CharacterController : MonoBehaviour
         rb.gravityScale = 0f;
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
         tr.emitting = true;
-        
-        
+
+
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
         rb.gravityScale = originalGravity;
         isDashing = false;
         yield return new WaitForSeconds(dashingCoolDown);
         canDash = true;
-        
+
     }
     void Attack1() //sword mekaniði
     {
-        
+
         if (Time.time > nextfire)
         {
-           
+
             nextfire = Time.time + firerate;
             if (canAttack)
             {
-                
+
                 canAttack = false;
                 swordCollider.SetActive(true);
                 StartCoroutine(ResetAttack());
-               
+
             }
         }
 
@@ -207,10 +212,10 @@ public class CharacterController : MonoBehaviour
 
             other.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
         }
-       
+
     }
-  
-  
+
+
 
     void Attack2() // Mermi atma
     {
@@ -235,30 +240,6 @@ public class CharacterController : MonoBehaviour
 
 
 
-    private void PlayFootstepSound()
-    {
-        if (!isPlayingFootstep && footstepSounds.Length > 0)
-        {
-            int randomIndex = Random.Range(0, footstepSounds.Length);
-            AudioClip selectedFootstepSound = footstepSounds[randomIndex];
 
-            audioSource.clip = selectedFootstepSound;
-            audioSource.Play();
-
-            StartCoroutine(WaitForFootstepSound(selectedFootstepSound.length));
-        }
-    }
-
-    private void StopFootstepSound()
-    {
-        audioSource.Stop();
-        isPlayingFootstep = false;
-    }
-    private IEnumerator WaitForFootstepSound(float duration)
-    {
-        isPlayingFootstep = true;
-        yield return new WaitForSeconds(duration);
-        isPlayingFootstep = false;
-    }
-
+    
 }
