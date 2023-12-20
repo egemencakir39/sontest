@@ -38,7 +38,9 @@ public class CharacterController : MonoBehaviour
     Animator animator;
     //ses
     AudioSource audioSource;
-    
+    public AudioClip[] footstepSounds;
+    private bool isPlayingFootstep = false;
+
 
 
 
@@ -117,7 +119,7 @@ public class CharacterController : MonoBehaviour
             animator.SetBool("RunAnim", true);
             if (!isMoving)
             {
-                audioSource.Play();
+                PlayFootstepSound();
                 isMoving = true;
             }
            
@@ -127,8 +129,8 @@ public class CharacterController : MonoBehaviour
             animator.SetBool("RunAnim", false);
             if (isMoving)
             {
-              
-                audioSource.Stop();
+              StopFootstepSound();
+               
                 isMoving = false;
             }
           
@@ -224,5 +226,30 @@ public class CharacterController : MonoBehaviour
 
 
     }
-   
+    private void PlayFootstepSound()
+    {
+        if (!isPlayingFootstep && footstepSounds.Length > 0)
+        {
+            int randomIndex = Random.Range(0, footstepSounds.Length);
+            AudioClip selectedFootstepSound = footstepSounds[randomIndex];
+
+            audioSource.clip = selectedFootstepSound;
+            audioSource.Play();
+
+            StartCoroutine(WaitForFootstepSound(selectedFootstepSound.length));
+        }
+    }
+
+    private void StopFootstepSound()
+    {
+        audioSource.Stop();
+        isPlayingFootstep = false;
+    }
+    private IEnumerator WaitForFootstepSound(float duration)
+    {
+        isPlayingFootstep = true;
+        yield return new WaitForSeconds(duration);
+        isPlayingFootstep = false;
+    }
+
 }
