@@ -56,6 +56,7 @@ public class CharacterController : MonoBehaviour
         animator = GetComponent<Animator>();
         SoundManagerScript = GameObject.Find("SoundManager").GetComponent<soundManager>();
         audioSource = GetComponent<AudioSource>();
+       
     }
     private void Update()
     {
@@ -63,7 +64,9 @@ public class CharacterController : MonoBehaviour
 
         if (canAttack && Input.GetMouseButtonDown(0))//kýlýç vurma
         {
+            animator.SetTrigger("attack1");
             Attack1();
+            
         }
 
         flipface();
@@ -129,8 +132,8 @@ public class CharacterController : MonoBehaviour
             animator.SetBool("RunAnim", false);
             if (isMoving)
             {
-              StopFootstepSound();
-               
+              
+                StopFootstepSound();
                 isMoving = false;
             }
           
@@ -170,15 +173,18 @@ public class CharacterController : MonoBehaviour
     }
     void Attack1() //sword mekaniði
     {
+        
         if (Time.time > nextfire)
         {
+           
             nextfire = Time.time + firerate;
             if (canAttack)
             {
+                
                 canAttack = false;
                 swordCollider.SetActive(true);
                 StartCoroutine(ResetAttack());
-                animator.SetTrigger("attack1");
+               
             }
         }
 
@@ -226,6 +232,9 @@ public class CharacterController : MonoBehaviour
 
 
     }
+
+
+
     private void PlayFootstepSound()
     {
         if (!isPlayingFootstep && footstepSounds.Length > 0)
