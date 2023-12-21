@@ -10455,13 +10455,11 @@ MonoBehaviour:
   firePoint: {fileID: 2146982165}
   BulletSpeed: 10
   fireRateAttack2: 1.4
-  FootStepRatePlay: 0.1
   FootSteps:
   - {fileID: 8300000, guid: aa2e7632352130044bd8897d1fcafde2, type: 3}
   - {fileID: 8300000, guid: fdd2d043996f95244a968f3c3d4d1e24, type: 3}
   - {fileID: 8300000, guid: 057f431937954b64195ad76e731e0a3c, type: 3}
   - {fileID: 8300000, guid: c56eca7eae774a5409bc3ef4ab48f898, type: 3}
-  timer: 0
 --- !u!96 &1025502419
 TrailRenderer:
   serializedVersion: 2
@@ -10850,7 +10848,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0

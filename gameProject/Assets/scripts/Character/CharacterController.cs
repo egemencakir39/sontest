@@ -37,19 +37,8 @@ public class CharacterController : MonoBehaviour
     [SerializeField] public static int playerScore = 5;
     Animator animator;
     //ses
-    private AudioSource audioSource;
-    public float FootStepRatePlay = 0.5f;
+    private AudioSource audioSource; 
     public AudioClip[] FootSteps;
-    public float timer;
-
-
-
-
-
-
-
-
-
     private bool isMoving = false;
 
   
@@ -109,9 +98,6 @@ public class CharacterController : MonoBehaviour
 
         }
 
-
-
-
     }
     private void FixedUpdate()
     {
@@ -128,26 +114,20 @@ public class CharacterController : MonoBehaviour
         if (horizontalInput != 0)
         {
             animator.SetBool("RunAnim", true);
-            if (!isMoving)
+            isMoving = true;
+            if (!audioSource.isPlaying)
             {
-            //  audioSource.Play();
-                isMoving = true;
-                if (Time.time > timer)
-                {
-                    timer = Time.time + 1 / FootStepRatePlay;
-                    FootStepRandomize();
-                }
-
+                AudioClip randomyurumesesi = FootSteps[Random.Range(0, FootSteps.Length)];
+                audioSource.PlayOneShot(randomyurumesesi);
+                audioSource.pitch = Random.Range(0.8f, 1.2f);
             }
-
         }
         else
         {
             animator.SetBool("RunAnim", false);
             if (isMoving)
             {
-
-            //    audioSource.Stop();
+                audioSource.Stop();
                 isMoving = false;
             }
 
@@ -246,13 +226,5 @@ public class CharacterController : MonoBehaviour
 
 
     }
-    void FootStepRandomize()
-    {
-        AudioClip SoundToPlay = FootSteps[Random.Range(0, FootSteps.Length)];
-        audioSource.PlayOneShot(SoundToPlay);
-    }
-
-
-
 
 }
