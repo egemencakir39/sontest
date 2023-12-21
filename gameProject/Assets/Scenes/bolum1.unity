@@ -988,7 +988,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129970949}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 188.6, y: -9.9, z: 0.20109801}
+  m_LocalPosition: {x: 233.95, y: 1.13, z: 0.20109801}
   m_LocalScale: {x: 2.025, y: 1.99125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1035,17 +1035,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 129970949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb3356265660bff4a9b86f6edb7f69cf, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b7730f852229984182c932fe884d5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: {fileID: 1209827747}
-  pointB: {fileID: 1196621741}
-  moveSpeed: 5
-  Damage: 10
-  chaseSpeed: 5
-  chaseDistance: 10
-  attackDistance: 5
-  timeBetweenAttacks: 2
+  damageAmount: 10
 --- !u!1 &139418799
 GameObject:
   m_ObjectHideFlags: 0
@@ -8066,7 +8059,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 298473663}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -180.1, y: -52.1, z: 0.20109801}
+  m_LocalPosition: {x: -409.5, y: -60, z: 0.20109801}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10462,6 +10455,13 @@ MonoBehaviour:
   firePoint: {fileID: 2146982165}
   BulletSpeed: 10
   fireRateAttack2: 1.4
+  FootStepRatePlay: 0.1
+  FootSteps:
+  - {fileID: 8300000, guid: aa2e7632352130044bd8897d1fcafde2, type: 3}
+  - {fileID: 8300000, guid: fdd2d043996f95244a968f3c3d4d1e24, type: 3}
+  - {fileID: 8300000, guid: 057f431937954b64195ad76e731e0a3c, type: 3}
+  - {fileID: 8300000, guid: c56eca7eae774a5409bc3ef4ab48f898, type: 3}
+  timer: 0
 --- !u!96 &1025502419
 TrailRenderer:
   serializedVersion: 2
@@ -10804,9 +10804,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2d9183d7f2aa486498e890fe42eea919, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.865
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0

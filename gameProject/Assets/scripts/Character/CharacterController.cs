@@ -38,9 +38,13 @@ public class CharacterController : MonoBehaviour
     Animator animator;
     //ses
     private AudioSource audioSource;
-    
-    
-   
+    public float FootStepRatePlay = 0.5f;
+    public AudioClip[] FootSteps;
+    public float timer;
+
+
+
+
 
 
 
@@ -126,8 +130,13 @@ public class CharacterController : MonoBehaviour
             animator.SetBool("RunAnim", true);
             if (!isMoving)
             {
-              audioSource.Play();
+            //  audioSource.Play();
                 isMoving = true;
+                if (Time.time > timer)
+                {
+                    timer = Time.time + 1 / FootStepRatePlay;
+                    FootStepRandomize();
+                }
 
             }
 
@@ -138,7 +147,7 @@ public class CharacterController : MonoBehaviour
             if (isMoving)
             {
 
-                audioSource.Stop();
+            //    audioSource.Stop();
                 isMoving = false;
             }
 
@@ -237,9 +246,13 @@ public class CharacterController : MonoBehaviour
 
 
     }
+    void FootStepRandomize()
+    {
+        AudioClip SoundToPlay = FootSteps[Random.Range(0, FootSteps.Length)];
+        audioSource.PlayOneShot(SoundToPlay);
+    }
 
 
 
 
-    
 }
