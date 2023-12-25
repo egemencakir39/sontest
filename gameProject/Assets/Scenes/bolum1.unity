@@ -734,6 +734,64 @@ Transform:
   m_Father: {fileID: 1167139783}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &106044803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 106044805}
+  - component: {fileID: 106044804}
+  m_Layer: 6
+  m_Name: specialAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &106044804
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106044803}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.2438774, y: -0.12121725}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.0727463, y: 0.07479763}
+  m_EdgeRadius: 0
+--- !u!4 &106044805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106044803}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1025502417}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &121712611
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,7 +1046,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129970949}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 233.95, y: 1.13, z: 0.20109801}
+  m_LocalPosition: {x: 237.01, y: 1.13, z: 0.20109801}
   m_LocalScale: {x: 2.025, y: 1.99125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8242,7 +8300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1005803891860962481, guid: a14bc342f809be449a14e997dc8252f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 144.93
+      value: 137.89
       objectReference: {fileID: 0}
     - target: {fileID: 1005803891860962481, guid: a14bc342f809be449a14e997dc8252f7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8283,6 +8341,10 @@ PrefabInstance:
     - target: {fileID: 4249197368883534085, guid: a14bc342f809be449a14e997dc8252f7, type: 3}
       propertyPath: m_Name
       value: gem-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4249197368883534085, guid: a14bc342f809be449a14e997dc8252f7, type: 3}
+      propertyPath: m_TagString
+      value: chem
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a14bc342f809be449a14e997dc8252f7, type: 3}
@@ -10012,7 +10074,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859444721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.117, y: -0.518, z: 0}
+  m_LocalPosition: {x: 0.117, y: -0.479, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10425,6 +10487,7 @@ Transform:
   - {fileID: 1298819537}
   - {fileID: 2146982165}
   - {fileID: 859444722}
+  - {fileID: 106044805}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10460,6 +10523,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fdd2d043996f95244a968f3c3d4d1e24, type: 3}
   - {fileID: 8300000, guid: 057f431937954b64195ad76e731e0a3c, type: 3}
   - {fileID: 8300000, guid: c56eca7eae774a5409bc3ef4ab48f898, type: 3}
+  SpecialAttackSword: {fileID: 106044803}
 --- !u!96 &1025502419
 TrailRenderer:
   serializedVersion: 2
@@ -13629,7 +13693,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767466387}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 147.26, y: 19.84, z: 0}
+  m_LocalPosition: {x: 152.13, y: 19.84, z: 0}
   m_LocalScale: {x: 3.5416665, y: 3.5416665, z: 1.0007358}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14663,8 +14727,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 3fc2bbd409bf34ab6af1637bab569da1, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

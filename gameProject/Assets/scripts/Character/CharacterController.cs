@@ -40,8 +40,16 @@ public class CharacterController : MonoBehaviour
     private AudioSource audioSource; 
     public AudioClip[] FootSteps;
     private bool isMoving = false;
+    //special attack
+    [SerializeField] private GameObject SpecialAttackSword;
+    private bool hasItem = false;
+    private bool isInSpecialAttackMode = false;
+    private float specialAttackDuration = 20f;
+    private float timeSinceSpecialAttack;
+    private bool canUseSpecialAttack = true;
+    
 
-  
+
 
 
 
@@ -97,7 +105,19 @@ public class CharacterController : MonoBehaviour
             Invoke("Attack2", .7f);
 
         }
-
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            // Eðer F tuþuna basýldýðýnda ve belirli bir öðe alýndýysa, ve özel saldýrý modunda deðilse SpecialAttack fonksiyonunu baþlat
+            if (hasItem && !isInSpecialAttackMode)
+            {
+                StartCoroutine(StartSpecialAttack());
+            }
+            else if (isInSpecialAttackMode)
+            {
+                // Eðer F tuþuna basýldýðýnda ve özel saldýrý modunda ise SpecialAttack fonksiyonunu çaðýr
+                SpecialAttack();
+            }
+        }
     }
     private void FixedUpdate()
     {
@@ -132,6 +152,7 @@ public class CharacterController : MonoBehaviour
             }
 
         }
+       
     }
 
     void flipface() // karakterin yüzünü döndürme
@@ -183,13 +204,54 @@ public class CharacterController : MonoBehaviour
         }
 
     }
+    void SpecialAttack()
+    {
+        if (Time.time>nextfire)
+        {
+            nextfire = Time.time + firerate;
+            if (canAttack)
+            {
+                canAttack = false;
+                SpecialAttackSword.SetActive(true);
+                StartCoroutine(ResetAttack());
+            }
+        }
+    }
+    IEnumerator StartSpecialAttack()
+    {
+        isInSpecialAttackMode = true;
+        hasItem = false; // Bu satýr, itemin kullanýlmasýný sýnýrlamak için
+        timeSinceSpecialAttack = 0f;
+
+        // Belirli bir süre boyunca özel saldýrý modunu aktif hale getir
+        while (timeSinceSpecialAttack < specialAttackDuration)
+        {
+            timeSinceSpecialAttack += Time.deltaTime;
+
+            // Özel saldýrý kodlarý buraya gelebilir (örneðin, SpecialAttack fonksiyonu çaðrýlabilir)
+            if (Input.GetKeyDown(KeyCode.F) && !isInSpecialAttackMode)
+            {
+                SpecialAttack();
+            }
+
+            yield return null;
+        }
+
+        // Belirli süre dolunca özel saldýrý modunu kapat
+        isInSpecialAttackMode = false;
+
+        // Özel saldýrý modunu tekrar kullanýlabilecek hale getir
+        yield return new WaitForSeconds(20f);
+        canUseSpecialAttack = true;
+    }
+
     IEnumerator ResetAttack()
     {
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
         swordCollider.SetActive(false);
-        // chainCollider.SetActive(false);
-
+        SpecialAttackSword.SetActive(false); 
+    
 
     }
 
@@ -201,7 +263,14 @@ public class CharacterController : MonoBehaviour
 
             other.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
         }
-
+        if (other.CompareTag("chem"))
+        {
+            hasItem = true;
+        }
+        if (SpecialAttackSword.activeSelf && other.CompareTag("enemy"))
+        {
+            other.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
+        }
     }
 
 
