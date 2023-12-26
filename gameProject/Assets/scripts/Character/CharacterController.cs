@@ -71,6 +71,7 @@ public class CharacterController : MonoBehaviour
         {
             animator.SetTrigger("attack1");
             Attack1();
+            SoundManagerScript.Attack1_();
 
         }
 
@@ -110,10 +111,12 @@ public class CharacterController : MonoBehaviour
             // Eðer F tuþuna basýldýðýnda ve belirli bir öðe alýndýysa, ve özel saldýrý modunda deðilse SpecialAttack fonksiyonunu baþlat
             if (hasItem && !isInSpecialAttackMode)
             {
+                
                 StartCoroutine(StartSpecialAttack());
             }
             else if (isInSpecialAttackMode)
             {
+                animator.SetTrigger("SpecialAttack");
                 // Eðer F tuþuna basýldýðýnda ve özel saldýrý modunda ise SpecialAttack fonksiyonunu çaðýr
                 SpecialAttack();
             }
@@ -206,7 +209,7 @@ public class CharacterController : MonoBehaviour
     }
     void SpecialAttack()
     {
-        if (Time.time>nextfire)
+        if (Time.time > nextfire)
         {
             nextfire = Time.time + firerate;
             if (canAttack)
@@ -232,6 +235,7 @@ public class CharacterController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F) && !isInSpecialAttackMode)
             {
                 SpecialAttack();
+                
             }
 
             yield return null;

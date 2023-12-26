@@ -7,6 +7,7 @@ public class soundManager : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField] private AudioClip jump;
     [SerializeField] private AudioClip dash_;
+    [SerializeField] private AudioClip atack1;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -18,5 +19,9 @@ public class soundManager : MonoBehaviour
     public void Dash_()
     {
         audioSource.PlayOneShot(dash_);
+    }
+    public void Attack1_()
+    {
+        audioSource.PlayOneShot(atack1);
     }
 }
