@@ -4,33 +4,38 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int maxHealth = 100; // Düþmanýn maksimum saðlýðý
-    public int currentHealth; // Þu anki saðlýk
-    public GameObject itemPrefab; // Oluþturulacak item prefabý
-   
-
+    public int maxHealth = 100; 
+    public int currentHealth;
+    public GameObject itemPrefab;
+    public float knockbackForce = 5f;
     void Start()
     {
-        currentHealth = maxHealth; // Baþlangýçta düþmanýn maksimum saðlýðýna sahip olur
+        currentHealth = maxHealth; 
     }
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage; // Düþmanýn saðlýðýný aldýðý hasar kadar azalt
+        currentHealth -= damage;
 
         if (currentHealth <= 0)
         {
-            Die(); // Düþmanýn saðlýðý sýfýr veya daha azsa, ölüm iþlemi
+            Die();
             CharacterController.playerScore += 10;
         }
+        else
+        {
+            Knockback();
+        }
+    }
+    void Knockback()
+    {
+        Vector2 knockbackDirection = (transform.position - CharacterController.playerPosition.position).normalized;
+        GetComponent<Rigidbody2D>().velocity = new Vector2(knockbackDirection.x * knockbackForce, knockbackDirection.y * knockbackForce);
     }
 
     void Die()
     {
-        // Düþmanýn ölüm iþlemini burada gerçekleþtirin
-        // Örneðin, ölüm animasyonunu baþlatabilir veya düþman objesini yok edebilirsiniz
-
-        // Ölüm iþlemi gerçekleþtikten sonra, toplanabilir itemi oluþturun
+        
         Instantiate(itemPrefab, transform.position, Quaternion.identity);
 
         Destroy(gameObject); // Düþman objesini yok edin
@@ -40,8 +45,8 @@ public class EnemyHealth : MonoBehaviour
     {
         if (other.gameObject == itemPrefab)
         {
-            // Ölüm nesnesi ile çarpýþýldý
-            Destroy(gameObject); // Oyuncuyu sahneden sil
+            
+            Destroy(gameObject); 
         }
     }
 }

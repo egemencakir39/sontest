@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class BossTeleport : MonoBehaviour
 {
-    public Transform pos1; 
+    public Transform pos1;
     public Transform pos2;
-    public float teleportDistance = 2f; 
+    public float teleportDistance = 2f;
     public Transform firePoint;
-    private Transform targetPos; 
-    private bool isTeleporting = false; 
+    private Transform targetPos;
+    private bool isTeleporting = false;
     private bool isAttacking = false;
     public GameObject enemyBullet;
     public float attackCooldown = 2f;
     private Transform player;
     public float teleportCoolDown = 2;
+
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -32,6 +33,19 @@ public class BossTeleport : MonoBehaviour
         if (distanceToPlayer <= teleportDistance && !isTeleporting)
         {
             StartCoroutine(Teleport());
+        }
+    }
+    void UpdateFacingDirection(Vector2 targetPosition)
+    {
+        if (targetPosition.x > transform.position.x)
+        {
+            // Player saðda, yüzü saða baksýn
+            transform.localScale = new Vector3(2f, 2f, 2f);
+        }
+        else
+        {
+            // Player solda, yüzü sola baksýn
+            transform.localScale = new Vector3(-2f, 2f, 2f);
         }
     }
 
@@ -55,13 +69,14 @@ public class BossTeleport : MonoBehaviour
 
     IEnumerator AttackCooldown()
     {
-        while (true) // Sonsuz bir döngü
+        while (true)
         {
             float distanceToPlayer = Vector2.Distance(transform.position, PlayerPosition());
 
             if (distanceToPlayer <= 10f && !isAttacking)
             {
                 isAttacking = true;
+                UpdateFacingDirection(player.position);
 
                 try
                 {
@@ -69,7 +84,11 @@ public class BossTeleport : MonoBehaviour
                     {
                         GameObject fire = Instantiate(enemyBullet, firePoint.position, Quaternion.identity);
                         Vector2 direction = (player.position - firePoint.position).normalized;
-                        fire.GetComponent<Rigidbody2D>().velocity = direction * 10f;
+
+                        // Y ekseninde hareket etmesini engelle (sadece saða veya sola gitmesini saðla)
+                        direction.y = 0;
+
+                        fire.GetComponent<Rigidbody2D>().velocity = direction.normalized * 10f;
                     }
 
                     yield return new WaitForSeconds(attackCooldown);
