@@ -120,14 +120,41 @@ public class EnemyController : MonoBehaviour
 
             if (enemyBullet != null && firePoint != null)
             {
-                GameObject fire = Instantiate(enemyBullet, firePoint.position, Quaternion.identity);
                 Vector2 direction = (player.position - firePoint.position).normalized;
+
+                GameObject fire = Instantiate(enemyBullet, firePoint.position, Quaternion.identity);
+
+                // Nesnenin yüzünü atan yöne göre döndür
+                UpdateObjectFacingDirection(fire, direction);
+
+                // Nesneyi hareket ettir
                 fire.GetComponent<Rigidbody2D>().velocity = direction * 10f;
             }
         }
         finally
         {
             isAttacking = false;
+        }
+    }
+
+
+
+
+
+    void UpdateObjectFacingDirection(GameObject obj, Vector2 direction)
+    {
+        SpriteRenderer objRenderer = obj.GetComponent<SpriteRenderer>();
+        if (objRenderer != null)
+        {
+            // Nesnenin yüzünü atan yöne göre döndür
+            if (direction.x > 0)
+            {
+                obj.transform.localScale = new Vector3(1, 1, 1); // Nesne saða gidiyorsa, yüzü saða baksýn
+            }
+            else
+            {
+                obj.transform.localScale = new Vector3(-1, 1, 1); // Nesne sola gidiyorsa, yüzü sola baksýn
+            }
         }
     }
 

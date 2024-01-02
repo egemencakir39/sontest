@@ -83,7 +83,10 @@ public class BossTeleport : MonoBehaviour
                     if (enemyBullet != null && firePoint != null)
                     {
                         GameObject fire = Instantiate(enemyBullet, firePoint.position, Quaternion.identity);
+
+                        // Oyuncuya göre ateþin yüzünü döndür
                         Vector2 direction = (player.position - firePoint.position).normalized;
+                        UpdateFacingDirection(player.position);
 
                         // Y ekseninde hareket etmesini engelle (sadece saða veya sola gitmesini saðla)
                         direction.y = 0;
