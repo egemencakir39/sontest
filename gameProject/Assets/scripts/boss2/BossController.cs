@@ -107,12 +107,14 @@ public class BossController : MonoBehaviour
 
     void Attack1()
     {
+        animator.SetTrigger("Attack1");
         Debug.Log("Attack 1!");
         FlipTowardsPlayer(player.position.x);
     }
 
     void Attack2()
     {
+        animator.SetTrigger("Attack1");
         Debug.Log("Attack 2!");
         FlipTowardsPlayer(player.position.x);
     }
