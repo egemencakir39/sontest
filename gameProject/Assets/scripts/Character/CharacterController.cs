@@ -7,16 +7,16 @@ public class CharacterController : MonoBehaviour
 {
     soundManager SoundManagerScript;
 
-    public float moveSpeed = 5f;
-    public float jumpForce = 10f;
-    public int extraJumps = 1;
-    public float dashingPower = 24f;
-    public float dashingTime = 0.2f;
-    public float dashingCoolDown = 1f;
+   [SerializeField] private float moveSpeed = 5f;
+   [SerializeField] private float jumpForce = 10f;
+   [SerializeField] private int extraJumps = 1;
+   [SerializeField] private float dashingPower = 24f;
+   [SerializeField] private float dashingTime = 0.2f;
+   [SerializeField] private float dashingCoolDown = 1f;
     //saldýrý 1
-    public GameObject swordCollider;
-    public float attackCooldown = 1.0f;
-    public float firerate;
+   [SerializeField] private GameObject swordCollider;
+   [SerializeField] private float attackCooldown = 1.0f;
+   [SerializeField] private float firerate;
     float nextfire;
     public int attackDamage = 10;
     //zýplama
@@ -50,7 +50,7 @@ public class CharacterController : MonoBehaviour
     private int specialAttackDamage = 20;
 
 
-    public static Transform playerPosition;
+    [SerializeField] private static Transform playerPosition;
 
 
 
