@@ -50,7 +50,7 @@ public class CharacterController : MonoBehaviour
     private int specialAttackDamage = 20;
 
 
-    [SerializeField] private static Transform playerPosition;
+    public static Transform playerPosition;
 
 
 
