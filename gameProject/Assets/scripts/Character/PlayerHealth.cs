@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
     {
         cp = gameObject.GetComponent<ChekPointSystem>();
         // sahne yüklendiðinde maxHealth ile currentHealthi eþitle
-        if (SceneManager.GetActiveScene().name == "bolum1") 
+        if (SceneManager.GetActiveScene().name == "level1") 
         {
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(maxHealth);
