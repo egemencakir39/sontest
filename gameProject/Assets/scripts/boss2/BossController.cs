@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class BossController : MonoBehaviour
@@ -146,11 +145,11 @@ public class BossController : MonoBehaviour
         // Yürüyüþ yönüne göre dönüþ
         if (facingRight)
         {
-            transform.localScale = new Vector3(2, 2, 2); // Normal yönde
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); // Normal yönde
         }
         else
         {
-            transform.localScale = new Vector3(-2, 2, 2); // Ters yönde
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); // Ters yönde
         }
     }
 }
