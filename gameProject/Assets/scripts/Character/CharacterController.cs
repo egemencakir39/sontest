@@ -112,7 +112,7 @@ public class CharacterController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
-            // Eðer F tuþuna basýldýðýnda ve belirli bir öðe alýndýysa, ve özel saldýrý modunda deðilse SpecialAttack fonksiyonunu baþlat
+            // f basýlýysa ve item varsa baþlt
             if (hasItem && !isInSpecialAttackMode)
             {
                 
@@ -121,7 +121,7 @@ public class CharacterController : MonoBehaviour
             else if (isInSpecialAttackMode)
             {
                 animator.SetTrigger("SpecialAttack");
-                // Eðer F tuþuna basýldýðýnda ve özel saldýrý modunda ise SpecialAttack fonksiyonunu çaðýr
+                // f tuþuna basýldýðýnda çaðýr
                 SpecialAttack();
                 StartCoroutine(StartSpecialAttack());
             }
@@ -288,23 +288,25 @@ public class CharacterController : MonoBehaviour
 
     void Attack2() // Mermi atma
     {
-
         if (Time.time > nextFireAttack2)
         {
             nextFireAttack2 = Time.time + fireRateAttack2;
+
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+
+            // Mermiyi doðru yöne yerleþtir
+            Vector2 bulletVelocity = new Vector2((transform.localScale.x > 0) ? BulletSpeed : -BulletSpeed, 0f);
+            bullet.GetComponent<Rigidbody2D>().velocity = bulletVelocity;
+
+            // Mermiyi saða doðru atan karakterse, mermiyi de saða çevir
             if (transform.localScale.x > 0)
             {
-                bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(BulletSpeed, 0f); // Saða doðru atýþ
+                bullet.transform.localScale = new Vector3(7, 6, 1);
             }
-            else
+            else // Mermiyi sola doðru atan karakterse, mermiyi sola çevir
             {
-                bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-BulletSpeed, 0f); // Sola doðru atýþ
+                bullet.transform.localScale = new Vector3(-7, 6, 1);
             }
-
         }
-
-
     }
-
 }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fa00fd5c2bc5ff840b7d9c87079def7a
+guid: 99ce5c5062e81eb41ae377795eeb030a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,311 +101,257 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: samuray_yay-Sheet (1)_0
+      name: enemy1_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 15
-        width: 41
-        height: 28
-      alignment: 9
-      pivot: {x: 0.5000005, y: 0.6}
+        x: 20
+        y: 16
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf9ca6f75c3d2a24c810b270fa68bc59
-      internalID: 1984952586
+      spriteID: 383f87f2a2e605d489dc22981d390277
+      internalID: -1686783828
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: samuray_yay-Sheet (1)_1
+      name: enemy1_1
       rect:
         serializedVersion: 2
-        x: 116
-        y: 15
-        width: 41
-        height: 28
-      alignment: 9
-      pivot: {x: 0.50000036, y: 0.6}
+        x: 247
+        y: 16
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1293cbda10d2c4e4c8d4dad278113826
-      internalID: 499415415
+      spriteID: 2571f9f3c2420614993777ec4c4e2ca3
+      internalID: 629820847
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: samuray_yay-Sheet (1)_2
+      name: enemy1_2
       rect:
         serializedVersion: 2
-        x: 211
-        y: 15
-        width: 41
-        height: 28
-      alignment: 9
-      pivot: {x: 0.5137742, y: 0.6}
+        x: 476
+        y: 16
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07f36432cc26d0e4490a762f187fe1d4
-      internalID: -1641842823
+      spriteID: 31a66940e896b39499236b6ff6f51554
+      internalID: -65482013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: samuray_yay-Sheet (1)_3
+      name: enemy1_3
       rect:
         serializedVersion: 2
-        x: 306
-        y: 15
-        width: 41
-        height: 28
-      alignment: 9
-      pivot: {x: 0.5000007, y: 0.6}
+        x: 699
+        y: 16
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a262c79415d659d4ca4a6eddcd2a786d
-      internalID: -413749277
+      spriteID: ff054f1a2c698f34fb1af3bd871098ec
+      internalID: -1617297502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: samuray_yay-Sheet (1)_4
+      name: enemy1_4
       rect:
         serializedVersion: 2
-        x: 402
-        y: 15
-        width: 41
-        height: 28
-      alignment: 9
-      pivot: {x: 0.5000007, y: 0.6}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20054454fa3d5af4e82ebfce4bd92066
-      internalID: -1822896633
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: samuray_yay-Sheet (1)_5
-      rect:
-        serializedVersion: 2
-        x: 497
-        y: 15
-        width: 42
+        x: 924
+        y: 16
+        width: 27
         height: 30
-      alignment: 9
-      pivot: {x: 0.49999854, y: 0.6}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1e5121fd52ce3b4a94536edfc6d78e1
-      internalID: -191394956
+      spriteID: 1482f7c3c0e462f4f9c0b5c32997746d
+      internalID: 1647239992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: samuray_yay-Sheet (1)_6
+      name: enemy1_5
       rect:
         serializedVersion: 2
-        x: 592
-        y: 15
-        width: 41
-        height: 34
-      alignment: 9
-      pivot: {x: 0.4999985, y: 0.6}
+        x: 1147
+        y: 16
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b1ba1a0329c15a4a8d2a6a6f6cb4261
-      internalID: -908492938
+      spriteID: 04618a7adf2c8dc419a536dfcf2c7bd6
+      internalID: 1075966484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: samuray_yay-Sheet (1)_7
+      name: enemy1_6
       rect:
         serializedVersion: 2
-        x: 686
-        y: 15
-        width: 46
-        height: 36
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: feabe31ea641b08499f0a133b970f71c
-      internalID: 865045415
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: samuray_yay-Sheet (1)_8
-      rect:
-        serializedVersion: 2
-        x: 781
-        y: 15
-        width: 46
-        height: 37
-      alignment: 9
-      pivot: {x: 0.49999866, y: 0.6}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f1b9be56b85554e48a5b1a3714798ab3
-      internalID: 1637373841
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: samuray_yay-Sheet (1)_9
-      rect:
-        serializedVersion: 2
-        x: 876
-        y: 15
-        width: 42
-        height: 37
-      alignment: 9
-      pivot: {x: 0.50000143, y: 0.6}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6b2e06b5ab0ec14b9753654a7751d04
-      internalID: 388670335
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: samuray_yay-Sheet (1)_10
-      rect:
-        serializedVersion: 2
-        x: 971
-        y: 15
+        x: 1370
+        y: 16
         width: 39
-        height: 37
-      alignment: 9
-      pivot: {x: 0.50000155, y: 0.6}
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af236191358747147a444688a4e1bb86
-      internalID: 1096612232
+      spriteID: 99e87688efead674fa8fa4bef2ea7e1a
+      internalID: -168056769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: samuray_yay-Sheet (1)_11
+      name: enemy1_7
       rect:
         serializedVersion: 2
-        x: 1066
-        y: 15
-        width: 36
-        height: 37
-      alignment: 9
-      pivot: {x: 0.49238417, y: 0.6}
+        x: 1597
+        y: 16
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37843640317fe8c4f8d05299bfa1bbdb
-      internalID: 1259774660
+      spriteID: c06246df3eaaf7e4686872f84a6e3ea1
+      internalID: 72152021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: samuray_yay-Sheet (1)_12
+      name: enemy1_8
       rect:
         serializedVersion: 2
-        x: 1161
-        y: 15
-        width: 36
-        height: 37
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6}
+        x: 1829
+        y: 16
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f5f94e75fd8ee847b3ab52c26de3888
-      internalID: -1489419306
+      spriteID: 0bbc4be71f922e9418c79d9ca355c944
+      internalID: -1776554842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: samuray_yay-Sheet (1)_13
+      name: enemy1_9
       rect:
         serializedVersion: 2
-        x: 1256
-        y: 15
-        width: 37
-        height: 33
-      alignment: 9
-      pivot: {x: 0.5000033, y: 0.6}
+        x: 2049
+        y: 16
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71be81bc107f89f40975c42f3bc2f566
-      internalID: -1678513095
+      spriteID: 1a06b06d489f8b141bd06d8a219bc66e
+      internalID: 1828214982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy1_10
+      rect:
+        serializedVersion: 2
+        x: 2274
+        y: 16
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00bfd860871e4f4dab44d57bff3329e
+      internalID: 792339596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy1_11
+      rect:
+        serializedVersion: 2
+        x: 2497
+        y: 16
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb1e82063676b4a44a00d95f3206c738
+      internalID: 686228472
       vertices: []
       indices: 
       edges: []
@@ -421,20 +367,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      samuray_yay-Sheet (1)_0: 1984952586
-      samuray_yay-Sheet (1)_1: 499415415
-      samuray_yay-Sheet (1)_10: 1096612232
-      samuray_yay-Sheet (1)_11: 1259774660
-      samuray_yay-Sheet (1)_12: -1489419306
-      samuray_yay-Sheet (1)_13: -1678513095
-      samuray_yay-Sheet (1)_2: -1641842823
-      samuray_yay-Sheet (1)_3: -413749277
-      samuray_yay-Sheet (1)_4: -1822896633
-      samuray_yay-Sheet (1)_5: -191394956
-      samuray_yay-Sheet (1)_6: -908492938
-      samuray_yay-Sheet (1)_7: 865045415
-      samuray_yay-Sheet (1)_8: 1637373841
-      samuray_yay-Sheet (1)_9: 388670335
+      enemy1_0: -1686783828
+      enemy1_1: 629820847
+      enemy1_10: 792339596
+      enemy1_11: 686228472
+      enemy1_2: -65482013
+      enemy1_3: -1617297502
+      enemy1_4: 1647239992
+      enemy1_5: 1075966484
+      enemy1_6: -168056769
+      enemy1_7: 72152021
+      enemy1_8: -1776554842
+      enemy1_9: 1828214982
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

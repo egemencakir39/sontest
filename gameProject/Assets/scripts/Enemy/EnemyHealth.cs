@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int maxHealth = 100; 
-    public int currentHealth;
-    public GameObject itemPrefab;
-    public float knockbackForce = 5f;
+    [SerializeField] private int maxHealth = 100; 
+    [SerializeField] private int currentHealth;
+    [SerializeField] private GameObject itemPrefab;
+    [SerializeField] private float knockbackForce = 5f;
     void Start()
     {
         currentHealth = maxHealth; 
