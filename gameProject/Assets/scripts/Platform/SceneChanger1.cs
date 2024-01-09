@@ -8,9 +8,11 @@ using UnityEngine.UI;
 
 public class SceneChanger1 : MonoBehaviour
 {
+    soundManager SoundManagerScript;
     private int collectedKeys = 0;
     [SerializeField] private int requiredKeys = 5;
     [SerializeField] private TMP_Text keyCountText;
+    private AudioSource audioSource;
 
     private void Update()
     {
@@ -18,7 +20,8 @@ public class SceneChanger1 : MonoBehaviour
     }
     private void Start()
     {
-       
+        SoundManagerScript = GameObject.Find("SoundManager").GetComponent<soundManager>();
+        audioSource = GetComponent<AudioSource>();
         collectedKeys = 0;
         keyCountText.text = collectedKeys.ToString();
     }
@@ -34,7 +37,7 @@ public class SceneChanger1 : MonoBehaviour
             collectKey();
             Destroy(collision.gameObject);
             Debug.Log("alýndý anahtar");
-           
+            SoundManagerScript.Point_();
             Debug.Log("Key Count: " + collectedKeys);
         }
     }

@@ -7,18 +7,21 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-   
+    soundManager SoundManagerScript;
     public int maxHealth = 100;
     public int currentHealth;
    // public Transform respawnPoint;
     private ChekPointSystem cp;
     public healthBar healthBar;
-   
+    private AudioSource audioSource;
+
 
 
 
     private void Start()
     {
+        SoundManagerScript = GameObject.Find("SoundManager").GetComponent<soundManager>();
+        audioSource = GetComponent<AudioSource>();
         cp = gameObject.GetComponent<ChekPointSystem>();
         // sahne yüklendiðinde maxHealth ile currentHealthi eþitle
         if (SceneManager.GetActiveScene().name == "level1") 
@@ -80,6 +83,7 @@ public class PlayerHealth : MonoBehaviour
         if (collision.gameObject.CompareTag("Checkpoint"))
         {
             cp.CheckPointChanger(collision.gameObject.transform);
+            SoundManagerScript.CheckPoint_();
         }
     }
    

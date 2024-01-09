@@ -107,6 +107,7 @@ public class CharacterController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && playerScore >= 5)
         {
             animator.SetTrigger("attack2");
+            SoundManagerScript.Bow_();
             Invoke("Attack2", .7f);
 
         }
@@ -115,11 +116,12 @@ public class CharacterController : MonoBehaviour
             // f basýlýysa ve item varsa baþlt
             if (hasItem && !isInSpecialAttackMode)
             {
-                
+                SoundManagerScript.Attack1_();
                 StartCoroutine(StartSpecialAttack());
             }
             else if (isInSpecialAttackMode)
             {
+                SoundManagerScript.Attack1_();
                 animator.SetTrigger("SpecialAttack");
                 // f tuþuna basýldýðýnda çaðýr
                 SpecialAttack();
@@ -288,6 +290,7 @@ public class CharacterController : MonoBehaviour
 
     void Attack2() // Mermi atma
     {
+        
         if (Time.time > nextFireAttack2)
         {
             nextFireAttack2 = Time.time + fireRateAttack2;
