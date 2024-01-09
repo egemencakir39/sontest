@@ -83,7 +83,7 @@ public class PlayerHealth : MonoBehaviour
         if (collision.gameObject.CompareTag("Checkpoint"))
         {
             cp.CheckPointChanger(collision.gameObject.transform);
-            SoundManagerScript.CheckPoint_();
+           SoundManagerScript.CheckPoint_();
         }
     }
    
