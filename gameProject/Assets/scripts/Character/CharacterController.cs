@@ -51,7 +51,7 @@ public class CharacterController : MonoBehaviour
 
 
     public static Transform playerPosition;
-
+    
 
 
 
@@ -66,10 +66,13 @@ public class CharacterController : MonoBehaviour
         SoundManagerScript = GameObject.Find("SoundManager").GetComponent<soundManager>();
         audioSource = GetComponent<AudioSource>();
         playerPosition = transform;
+        swordCollider.SetActive(false);
+        SpecialAttackSword.SetActive(false);
+        
     }
     private void Update()
     {
-
+        
 
         if (canAttack && Input.GetMouseButtonDown(0))//kýlýç vurma
         {
@@ -79,7 +82,7 @@ public class CharacterController : MonoBehaviour
 
         }
 
-        flipface();
+        //flipface();
 
         // zemin temas kontrolü
         isGrounded = Physics2D.IsTouchingLayers(col, LayerMask.GetMask("Ground"));
@@ -108,7 +111,7 @@ public class CharacterController : MonoBehaviour
         {
             animator.SetTrigger("attack2");
             SoundManagerScript.Bow_();
-            Invoke("Attack2", .7f);
+            Invoke("Attack2", 1f);
 
         }
         if (Input.GetKeyDown(KeyCode.F))
@@ -131,6 +134,7 @@ public class CharacterController : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        flipface();
         if (isDashing)
         {
             return;
@@ -166,19 +170,24 @@ public class CharacterController : MonoBehaviour
 
     }
 
-    void flipface() // karakterin yüzünü döndürme
+    void flipface()
     {
-        Vector2 GeciciScale = transform.localScale;
-        if (rb.velocity.x > 0)
+        float horizontalInput = Input.GetAxis("Horizontal");
+        Vector3 newScale = transform.localScale;
+
+        if (horizontalInput > 0)
         {
-            GeciciScale.x = Mathf.Abs(GeciciScale.x); // Pozitif ölçek (saða bakýyor)
+            newScale.x = Mathf.Abs(newScale.x); // Pozitif ölçek (saða bakýyor)
         }
-        else if (rb.velocity.x < 0)
+        else if (horizontalInput < 0)
         {
-            GeciciScale.x = -Mathf.Abs(GeciciScale.x); // Negatif ölçek (sola bakýyor)
+            newScale.x = -Mathf.Abs(newScale.x); // Negatif ölçek (sola bakýyor)
         }
-        transform.localScale = GeciciScale;
+
+        transform.localScale = newScale;
     }
+
+
     private IEnumerator Dash() //dash fonksiyonu
     {
         canDash = false;
