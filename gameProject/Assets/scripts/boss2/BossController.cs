@@ -38,8 +38,9 @@ public class BossController : MonoBehaviour
             // Oyuncuya yaklaþýldýðýnda
             if (distanceToPlayer < chaseDistance)
             {
-                // player takip
-                transform.position = Vector2.MoveTowards(transform.position, player.position, chaseSpeed * Time.deltaTime);
+                // player takip sadece x ekseni
+                Vector3 targetPosition = new Vector3(player.position.x, transform.position.y, player.position.z);
+                transform.position = Vector2.MoveTowards(transform.position, targetPosition, chaseSpeed * Time.deltaTime);
                 isWalking = true;
 
                 FlipTowardsPlayer(player.position.x);

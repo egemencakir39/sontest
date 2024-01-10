@@ -92,16 +92,7 @@ public class CharacterController : MonoBehaviour
             remainingJumps = extraJumps;
         }
 
-        if (Input.GetButtonDown("Jump") && (isGrounded || remainingJumps > 0))
-        {
-
-            animator.SetTrigger("JumpAnim");
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            remainingJumps--;
-            SoundManagerScript.Jump_();
-
-
-        }
+       
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash) //dash tuþ kontrolü
         {
             StartCoroutine(Dash());
@@ -167,6 +158,17 @@ public class CharacterController : MonoBehaviour
 
         }
         playerPosition = transform;
+
+        if (Input.GetButtonDown("Jump") && (isGrounded || remainingJumps > 0))
+        {
+
+            animator.SetTrigger("JumpAnim");
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            remainingJumps--;
+            SoundManagerScript.Jump_();
+
+
+        }
 
     }
 
