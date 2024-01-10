@@ -9,8 +9,11 @@ public class CharacterController : MonoBehaviour
 
    [SerializeField] private float moveSpeed = 5f;
    [SerializeField] private float jumpForce = 10f;
-   [SerializeField] private int extraJumps = 1;
-   [SerializeField] private float dashingPower = 24f;
+    public Transform groundCheck;
+    public string groundTag = "Ground";
+    private bool canDoubleJump;
+    // [SerializeField] private int extraJumps = 1;
+    [SerializeField] private float dashingPower = 24f;
    [SerializeField] private float dashingTime = 0.2f;
    [SerializeField] private float dashingCoolDown = 1f;
     //saldýrý 1
@@ -21,7 +24,7 @@ public class CharacterController : MonoBehaviour
     public int attackDamage = 10;
     //zýplama
     private int remainingJumps;
-    private bool isGrounded = false;
+    private bool isGrounded;
     private Rigidbody2D rb;
     private Collider2D col;
     private bool canDash = true;
@@ -61,7 +64,9 @@ public class CharacterController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
-        remainingJumps = extraJumps;
+        isGrounded = false;
+        canDoubleJump = false;
+        //remainingJumps = extraJumps;
         animator = GetComponent<Animator>();
         SoundManagerScript = GameObject.Find("SoundManager").GetComponent<soundManager>();
         audioSource = GetComponent<AudioSource>();
@@ -85,12 +90,16 @@ public class CharacterController : MonoBehaviour
         //flipface();
 
         // zemin temas kontrolü
-        isGrounded = Physics2D.IsTouchingLayers(col, LayerMask.GetMask("Ground"));
+        //isGrounded = Physics2D.IsTouchingLayers(col, LayerMask.GetMask("Ground"));
+
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, 1 << LayerMask.NameToLayer(groundTag));
+
 
         if (isGrounded)
         {
-            remainingJumps = extraJumps;
+            canDoubleJump = true;
         }
+        /*
         if (Input.GetButtonDown("Jump") && (isGrounded || remainingJumps > 0))
         {
 
@@ -100,6 +109,26 @@ public class CharacterController : MonoBehaviour
             SoundManagerScript.Jump_();
 
 
+        }
+        */
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (isGrounded)
+            {
+                Jump();
+            }
+            else if (canDoubleJump)
+            {
+                Jump();
+                canDoubleJump = false;
+            }
+        }
+        void Jump()
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 0f); // Önceki yatay hýzý koru, sadece dikey hýzý deðiþtir
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            animator.SetTrigger("JumpAnim");
+            SoundManagerScript.Jump_();
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash) //dash tuþ kontrolü
