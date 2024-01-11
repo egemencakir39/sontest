@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Main-Menu-Example 1.unity
     guid: 2089166444794374ea90a06aced1756c
   - enabled: 1
-    path: Assets/Scenes/bolum1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/level1.unity
     guid: 86c10c526cd908949a54b7e5ca0796b2
   - enabled: 1
