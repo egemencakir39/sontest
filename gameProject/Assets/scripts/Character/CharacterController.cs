@@ -52,7 +52,7 @@ public class CharacterController : MonoBehaviour
     private bool canUseSpecialAttack = true;
     private int specialAttackDamage = 20;
 
-
+    public float fallSpeed = 10f;
     public static Transform playerPosition;
     
 
@@ -87,10 +87,7 @@ public class CharacterController : MonoBehaviour
 
         }
 
-        //flipface();
-
-        // zemin temas kontrolü
-        //isGrounded = Physics2D.IsTouchingLayers(col, LayerMask.GetMask("Ground"));
+       
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, 1 << LayerMask.NameToLayer(groundTag));
 
@@ -98,19 +95,13 @@ public class CharacterController : MonoBehaviour
         if (isGrounded)
         {
             canDoubleJump = true;
+            
         }
-        /*
-        if (Input.GetButtonDown("Jump") && (isGrounded || remainingJumps > 0))
-        {
+       
+        
+            
+        
 
-            animator.SetTrigger("JumpAnim");
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            remainingJumps--;
-            SoundManagerScript.Jump_();
-
-
-        }
-        */
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (isGrounded)
