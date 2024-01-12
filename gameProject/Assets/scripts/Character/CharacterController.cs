@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class CharacterController : MonoBehaviour
 {
@@ -54,7 +55,11 @@ public class CharacterController : MonoBehaviour
 
     public float fallSpeed = 10f;
     public static Transform playerPosition;
-    
+    [SerializeField] private Light2D enemyLight2D;
+    private Color originalColor;
+    private float lastETime;
+    private float cooldownDuration = 3f;
+
 
 
 
@@ -73,7 +78,7 @@ public class CharacterController : MonoBehaviour
         playerPosition = transform;
         swordCollider.SetActive(false);
         SpecialAttackSword.SetActive(false);
-        
+        originalColor = enemyLight2D.color;
     }
     private void Update()
     {
@@ -127,11 +132,12 @@ public class CharacterController : MonoBehaviour
             StartCoroutine(Dash());
             SoundManagerScript.Dash_();
         }
-        if (Input.GetKeyDown(KeyCode.E) && playerScore >= 5)
+        if (Input.GetKeyDown(KeyCode.E) && playerScore >= 5 && CanPressE())
         {
             animator.SetTrigger("attack2");
             SoundManagerScript.Bow_();
             Invoke("Attack2", 1f);
+            lastETime = Time.time;
 
         }
         if (Input.GetKeyDown(KeyCode.F))
@@ -208,7 +214,10 @@ public class CharacterController : MonoBehaviour
 
         transform.localScale = newScale;
     }
-
+    bool CanPressE()
+    {
+        return Time.time - lastETime >= cooldownDuration;
+    }
 
     private IEnumerator Dash() //dash fonksiyonu
     {
@@ -306,6 +315,7 @@ public class CharacterController : MonoBehaviour
         {
 
             other.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
+            StartCoroutine(FlashRed());
         }
         if (other.CompareTag("chem"))
         {
@@ -313,6 +323,7 @@ public class CharacterController : MonoBehaviour
         }
         if (SpecialAttackSword.activeSelf && other.CompareTag("enemy"))
         {
+            StartCoroutine(FlashRed());
             other.GetComponent<EnemyHealth>().TakeDamage(specialAttackDamage);
         }
     }
@@ -342,5 +353,14 @@ public class CharacterController : MonoBehaviour
                 bullet.transform.localScale = new Vector3(-7, 6, 1);
             }
         }
+    }
+    IEnumerator FlashRed()
+    {
+        enemyLight2D.color = Color.red; // Iþýðý kýrmýzý yap
+
+        // Belirli bir süre bekleyip tekrar orijinal rengine döndür
+        yield return new WaitForSeconds(0.5f); // Ýstediðiniz süreyi ayarlayabilirsiniz
+
+        enemyLight2D.color = originalColor; // Orijinal rengine geri dön
     }
 }

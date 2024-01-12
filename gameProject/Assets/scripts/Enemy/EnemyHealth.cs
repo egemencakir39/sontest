@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -8,9 +10,11 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private int currentHealth;
     [SerializeField] private GameObject itemPrefab;
     [SerializeField] private float knockbackForce = 5f;
+    
     void Start()
     {
-        currentHealth = maxHealth; 
+        currentHealth = maxHealth;
+        
     }
 
     public void TakeDamage(int damage)

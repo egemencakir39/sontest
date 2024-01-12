@@ -56,10 +56,12 @@ public class BossController : MonoBehaviour
                         if (randomAttack == 1)
                         {
                             Attack1();
+                            
                         }
                         else
                         {
                             Attack2();
+                          
                         }
 
                         // timer güncelle

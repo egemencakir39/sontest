@@ -73,7 +73,8 @@ public class PlayerHealth : MonoBehaviour
     }
     private void die()
     {
-       // yield return new WaitForSeconds(2);
+        //yield return new WaitForSeconds(delay);
+
         currentHealth = maxHealth;
         Debug.Log("Player Died");
         gameObject.transform.position = cp.GetCurrentCheckpoint().position;
@@ -83,9 +84,8 @@ public class PlayerHealth : MonoBehaviour
         if (collision.gameObject.CompareTag("Checkpoint"))
         {
             cp.CheckPointChanger(collision.gameObject.transform);
-           SoundManagerScript.CheckPoint_();
+            SoundManagerScript.CheckPoint_();
+            collision.GetComponent<Collider2D>().enabled = false;
         }
     }
-   
-
 }
