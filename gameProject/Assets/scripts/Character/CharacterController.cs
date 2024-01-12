@@ -52,17 +52,14 @@ public class CharacterController : MonoBehaviour
     private float timeSinceSpecialAttack;
     private bool canUseSpecialAttack = true;
     private int specialAttackDamage = 20;
-
-    public float fallSpeed = 10f;
     public static Transform playerPosition;
     [SerializeField] private Light2D enemyLight2D;
     private Color originalColor;
     private float lastETime;
     private float cooldownDuration = 3f;
-
-
-
-
+    private float coolDownTime = .7f;
+    private float mouseButton;
+    public AnimationClip[] animations;
 
 
     private void Start()
@@ -70,8 +67,7 @@ public class CharacterController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         isGrounded = false;
-        canDoubleJump = false;
-        //remainingJumps = extraJumps;
+        canDoubleJump = false;      
         animator = GetComponent<Animator>();
         SoundManagerScript = GameObject.Find("SoundManager").GetComponent<soundManager>();
         audioSource = GetComponent<AudioSource>();
@@ -82,32 +78,21 @@ public class CharacterController : MonoBehaviour
     }
     private void Update()
     {
-        
-
-        if (canAttack && Input.GetMouseButtonDown(0))//kýlýç vurma
+        if (canAttack && Input.GetMouseButtonDown(0) && Button0())//kýlýç vurma
         {
-            animator.SetTrigger("attack1");
+          // animator.SetTrigger("attack1");
             Attack1();
-            SoundManagerScript.Attack1_();
-
+            PlayRandomAnimation();
+            mouseButton = Time.time;
         }
-
-       
-
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, 1 << LayerMask.NameToLayer(groundTag));
-
-
         if (isGrounded)
         {
             canDoubleJump = true;
             
         }
-       
         
-            
-        
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)) //ZIPLAMA
         {
             if (isGrounded)
             {
@@ -119,20 +104,20 @@ public class CharacterController : MonoBehaviour
                 canDoubleJump = false;
             }
         }
-        void Jump()
+        void Jump()  //ZIPLAMA
         {
-            rb.velocity = new Vector2(rb.velocity.x, 0f); // Önceki yatay hýzý koru, sadece dikey hýzý deðiþtir
+            rb.velocity = new Vector2(rb.velocity.x, 0f); 
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             animator.SetTrigger("JumpAnim");
             SoundManagerScript.Jump_();
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash) //dash tuþ kontrolü
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash) //DASH
         {
             StartCoroutine(Dash());
             SoundManagerScript.Dash_();
         }
-        if (Input.GetKeyDown(KeyCode.E) && playerScore >= 5 && CanPressE())
+        if (Input.GetKeyDown(KeyCode.E) && playerScore >= 5 && CanPressE()) //OK
         {
             animator.SetTrigger("attack2");
             SoundManagerScript.Bow_();
@@ -140,7 +125,7 @@ public class CharacterController : MonoBehaviour
             lastETime = Time.time;
 
         }
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F)) // Special atak
         {
             // f basýlýysa ve item varsa baþlt
             if (hasItem && !isInSpecialAttackMode)
@@ -218,6 +203,10 @@ public class CharacterController : MonoBehaviour
     {
         return Time.time - lastETime >= cooldownDuration;
     }
+    bool Button0()
+    {
+        return Time.time - mouseButton >= coolDownTime;
+    }
 
     private IEnumerator Dash() //dash fonksiyonu
     {
@@ -250,6 +239,7 @@ public class CharacterController : MonoBehaviour
                 canAttack = false;
                 swordCollider.SetActive(true);
                 StartCoroutine(ResetAttack());
+               
 
             }
         }
@@ -356,11 +346,36 @@ public class CharacterController : MonoBehaviour
     }
     IEnumerator FlashRed()
     {
-        enemyLight2D.color = Color.red; // Iþýðý kýrmýzý yap
+        enemyLight2D.color = Color.red; 
 
-        // Belirli bir süre bekleyip tekrar orijinal rengine döndür
-        yield return new WaitForSeconds(0.5f); // Ýstediðiniz süreyi ayarlayabilirsiniz
+      
+        yield return new WaitForSeconds(0.5f); 
 
-        enemyLight2D.color = originalColor; // Orijinal rengine geri dön
+        enemyLight2D.color = originalColor;
     }
+    void PlayRandomAnimation()
+    {
+
+        if (animations == null || animations.Length == 0 || animator == null)
+        {
+            return;
+        }
+        int randomIndex = Random.Range(0, animations.Length);
+        AnimationClip selectedAnimation = animations[randomIndex];
+        animator.Play(selectedAnimation.name);
+        Debug.Log("Played Animation: " + selectedAnimation.name);
+
+        if (selectedAnimation.name == "attack1")
+        {
+            SoundManagerScript.Attack1_();
+        }
+        else if (selectedAnimation.name == "specialAttack")
+        {
+            SoundManagerScript.Attack2_();
+        }
+    }
+
 }
+
+
+

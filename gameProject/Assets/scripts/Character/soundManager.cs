@@ -11,6 +11,9 @@ public class soundManager : MonoBehaviour
     [SerializeField] private AudioClip bow_;
     [SerializeField] private AudioClip CheckPoint;
     [SerializeField] private AudioClip Point;
+    [SerializeField] private AudioClip atack2;
+    [SerializeField] private AudioClip takingDamage;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -35,8 +38,16 @@ public class soundManager : MonoBehaviour
     {
         audioSource.PlayOneShot(CheckPoint);
     }
-    public void Point_() 
+    public void Point_()
     {
         audioSource.PlayOneShot(Point);
+    }
+    public void Attack2_()
+    {
+        audioSource.PlayOneShot(atack2);
+    }
+    public void takingDamage_()
+    {
+        audioSource.PlayOneShot(takingDamage);
     }
 }
