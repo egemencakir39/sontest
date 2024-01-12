@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
     private ChekPointSystem cp;
     public healthBar healthBar;
     private AudioSource audioSource;
+    private float knockbackForce = 10f;
 
 
 
@@ -54,7 +55,14 @@ public class PlayerHealth : MonoBehaviour
     // health güncelle
     public void UpdateHealth(int amount)
     {
-        currentHealth += amount;
+        
+        if (amount < 0)
+        {
+          KnockBack();
+        }
+
+
+            currentHealth += amount;
         healthBar.SetHealth(currentHealth);
 
         // max saðlýða sýnýrla
@@ -88,4 +96,15 @@ public class PlayerHealth : MonoBehaviour
             collision.GetComponent<Collider2D>().enabled = false;
         }
     }
+    private void KnockBack()
+    {
+        Rigidbody2D playerRigidbody = GetComponent<Rigidbody2D>();
+        if (playerRigidbody != null)
+        {
+            Vector2 knockbackDirection = new Vector2(-1f, 1f); // Örneðin, sola ve yukarýya bir knockback
+            playerRigidbody.velocity = Vector2.zero; // Önceki hýzý sýfýrla
+            playerRigidbody.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
+        }
+    }
+
 }
