@@ -5,7 +5,13 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     public int damageAmount = 10;
+    soundManager SoundManagerScript;
 
+
+    private void Start()
+    {
+        SoundManagerScript = GameObject.Find("SoundManager").GetComponent<soundManager>();
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         
@@ -14,7 +20,7 @@ public class EnemyAttack : MonoBehaviour
             
             PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
 
-           
+            SoundManagerScript.takingDamage_();
 
 
 

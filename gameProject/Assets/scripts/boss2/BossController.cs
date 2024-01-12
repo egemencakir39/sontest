@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class BossController : MonoBehaviour
 {
+    soundManager SoundManagerScript;
     public Transform pointA;
     public Transform pointB;
     public float moveSpeed = 5f;
@@ -27,6 +28,7 @@ public class BossController : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
+        SoundManagerScript = GameObject.Find("SoundManager").GetComponent<soundManager>();
     }
 
     void Update()
@@ -121,14 +123,7 @@ public class BossController : MonoBehaviour
         FlipTowardsPlayer(player.position.x);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            // Oyuncuya hasar ver
-            other.GetComponent<PlayerHealth>().UpdateHealth(-Damage); // damageAmount, kýlýcýn verdiði hasar miktarý
-        }
-    }
+   
 
     void FlipTowardsPlayer(float playerX)
     {
