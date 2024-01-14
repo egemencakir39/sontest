@@ -51,7 +51,7 @@ public class CharacterController : MonoBehaviour
     private float specialAttackDuration = 20f;
     private float timeSinceSpecialAttack;
     private bool canUseSpecialAttack = true;
-    private int specialAttackDamage = 20;
+    [SerializeField] private int specialAttackDamage = 20;
     public static Transform playerPosition;
     [SerializeField] private Light2D enemyLight2D;
     private Color originalColor;
@@ -165,6 +165,7 @@ public class CharacterController : MonoBehaviour
                     AudioClip randomyurumesesi = FootSteps[Random.Range(0, FootSteps.Length)];
                     audioSource.PlayOneShot(randomyurumesesi);
                     audioSource.pitch = Random.Range(0.8f, 1.2f);
+                    
                 }
             }
             animator.SetBool("RunAnim", true);

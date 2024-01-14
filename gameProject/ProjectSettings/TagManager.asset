@@ -12,6 +12,7 @@ TagManager:
   - Ladder
   - chem
   - anahtar
+  - boss
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - enemy
   - ladder
   - BackGround
-  - 
+  - boss
   - 
   - 
   - 
