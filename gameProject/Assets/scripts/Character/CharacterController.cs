@@ -114,6 +114,7 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash) //DASH
         {
+            animator.SetTrigger("Dash");
             StartCoroutine(Dash());
             SoundManagerScript.Dash_();
         }
@@ -221,7 +222,7 @@ public class CharacterController : MonoBehaviour
         rb.gravityScale = 0f;
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
         tr.emitting = true;
-
+        
 
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;

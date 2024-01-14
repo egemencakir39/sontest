@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: ae992fcceacdf9b4b96652a9c1f03c5e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 30
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 2
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc1c5352ede2e9046ba9b566304e448e
+      internalID: -1382221460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 2
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cad141768a0297488c2aee33d46e937
+      internalID: -145360503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 2
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead74812cd934944da64fd59d0d58927
+      internalID: 285393390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 2
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5037e068b17d5af48928617ef74ec653
+      internalID: 866071421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 2
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e3619297169fdd4fa0b4639da6cd144
+      internalID: 1653508444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 2
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61285a533441c140b9bad4f0d54691d
+      internalID: -2049256167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 2
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6cd0fe8cd642848a428c3947a0b153
+      internalID: -1383926530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 2
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 726d6a3258b39364c96e94fb00e9fc9e
+      internalID: 1890145074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 2
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33c11ecd058b564dae1c4e8994df5da
+      internalID: -983283325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 2
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c375a74b8726d40b4577a4c3f42653
+      internalID: -828165893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 2
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df171613e7a7e642a8696eaf7172d42
+      internalID: -1109301850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 2
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2681b297932bb7b439bef60484a331aa
+      internalID: 615992364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 2
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4329c51912a126d4e8cffa118f60ddf6
+      internalID: -522113541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 2
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893686e4a90eddb47b46b8822373710d
+      internalID: 1310650651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 2
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b913521f0ad068f46841377cefaadb2c
+      internalID: 320422927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 2
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e0e32f8fdece8448032189e31c6fd4
+      internalID: -941122119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 2
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7439ecae0e8eb974aaa2cc13501ea591
+      internalID: 913504788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 2
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a39f2896d6d9ee4ba531bc115c77d4a
+      internalID: -1269163947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 2
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e8aac7bb66e56b459178ef65212adc9
+      internalID: -993557392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 2
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 457d0a9ea2740914e825bbe51b7900bd
+      internalID: 1732263049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 2
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef8272458b45264c8ef1197ce34335c
+      internalID: 361228529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 2
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85fc818855bde1c4d8dc8bafca73918d
+      internalID: 112596696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 2
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf50324f39504442b87603f28b7a1dd
+      internalID: 1511566016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_idle_yigit-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 2
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30f26f3720238354ea373cb555aa9f5d
+      internalID: 1534684118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      samuray_idle_yigit-Sheet_0: -1382221460
+      samuray_idle_yigit-Sheet_1: -145360503
+      samuray_idle_yigit-Sheet_10: -1109301850
+      samuray_idle_yigit-Sheet_11: 615992364
+      samuray_idle_yigit-Sheet_12: -522113541
+      samuray_idle_yigit-Sheet_13: 1310650651
+      samuray_idle_yigit-Sheet_14: 320422927
+      samuray_idle_yigit-Sheet_15: -941122119
+      samuray_idle_yigit-Sheet_16: 913504788
+      samuray_idle_yigit-Sheet_17: -1269163947
+      samuray_idle_yigit-Sheet_18: -993557392
+      samuray_idle_yigit-Sheet_19: 1732263049
+      samuray_idle_yigit-Sheet_2: 285393390
+      samuray_idle_yigit-Sheet_20: 361228529
+      samuray_idle_yigit-Sheet_21: 112596696
+      samuray_idle_yigit-Sheet_22: 1511566016
+      samuray_idle_yigit-Sheet_23: 1534684118
+      samuray_idle_yigit-Sheet_3: 866071421
+      samuray_idle_yigit-Sheet_4: 1653508444
+      samuray_idle_yigit-Sheet_5: -2049256167
+      samuray_idle_yigit-Sheet_6: -1383926530
+      samuray_idle_yigit-Sheet_7: 1890145074
+      samuray_idle_yigit-Sheet_8: -983283325
+      samuray_idle_yigit-Sheet_9: -828165893
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
