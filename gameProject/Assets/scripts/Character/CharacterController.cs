@@ -158,14 +158,18 @@ public class CharacterController : MonoBehaviour
 
         if (horizontalInput != 0)
         {
+            if (isGrounded)
+            {
+                if (!audioSource.isPlaying)
+                {
+                    AudioClip randomyurumesesi = FootSteps[Random.Range(0, FootSteps.Length)];
+                    audioSource.PlayOneShot(randomyurumesesi);
+                    audioSource.pitch = Random.Range(0.8f, 1.2f);
+                }
+            }
             animator.SetBool("RunAnim", true);
             isMoving = true;
-            if (!audioSource.isPlaying)
-            {
-                AudioClip randomyurumesesi = FootSteps[Random.Range(0, FootSteps.Length)];
-                audioSource.PlayOneShot(randomyurumesesi);
-                audioSource.pitch = Random.Range(0.8f, 1.2f);
-            }
+           
         }
         else
         {
