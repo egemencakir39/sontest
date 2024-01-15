@@ -71,15 +71,22 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth == 0)
         {
             die();
+            gameObject.tag = "deadplayer";
             animator.SetTrigger("Dead");
         }
         healthBar.SetHealth(currentHealth);
     }
 
-    
-	
+    private void Update()
+    {
+        if (currentHealth != 0)
+        {
+            gameObject.tag = "Player";
+        }
+    }
 
-	
+
+
     private void die()
     {
         if (characterController != null)
@@ -140,7 +147,8 @@ public class PlayerHealth : MonoBehaviour
 
     private IEnumerator Cp()
     {
-        yield return new WaitForSeconds(.9f);
+        
+        yield return new WaitForSeconds(1.5f);
         animator.ResetTrigger("Dead");
         gameObject.transform.position = cp.GetCurrentCheckpoint().position;
     }
