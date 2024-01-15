@@ -9,7 +9,7 @@ public class CharacterController : MonoBehaviour
     soundManager SoundManagerScript;
 
    [SerializeField] public float moveSpeed = 5f;
-   [SerializeField] private float jumpForce = 10f;
+   [SerializeField] public float jumpForce = 10f;
     public Transform groundCheck;
     public string groundTag = "Ground";
     private bool canDoubleJump;
@@ -38,7 +38,7 @@ public class CharacterController : MonoBehaviour
     public float BulletSpeed = 100f;
     public float fireRateAttack2;
     float nextFireAttack2;
-    [SerializeField] public static int playerScore = 5;
+    [SerializeField] public static int playerScore = 0;
     Animator animator;
     //ses
     private AudioSource audioSource; 
@@ -118,7 +118,7 @@ public class CharacterController : MonoBehaviour
             StartCoroutine(Dash());
             SoundManagerScript.Dash_();
         }
-        if (Input.GetKeyDown(KeyCode.E) && playerScore >= 5 && CanPressE()) //OK
+        if (Input.GetKeyDown(KeyCode.E) && playerScore >= 20 && CanPressE()) //OK
         {
             animator.SetTrigger("attack2");
             SoundManagerScript.Bow_();

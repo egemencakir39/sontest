@@ -85,6 +85,7 @@ public class PlayerHealth : MonoBehaviour
         if (characterController != null)
         {
             characterController.moveSpeed = 0f;
+            characterController.jumpForce = 0f;
         }
 
 
@@ -95,11 +96,6 @@ public class PlayerHealth : MonoBehaviour
         isDead = true; // Ölüm durumunu aktif et
         StartCoroutine(RespawnAfterDelay());
         StartCoroutine(Cp());
-
-
-
-
-        
 
     }
 
@@ -130,7 +126,7 @@ public class PlayerHealth : MonoBehaviour
 
     private IEnumerator RespawnAfterDelay()
     {
-        yield return new WaitForSeconds(1.3f);
+        yield return new WaitForSeconds(1.5f);
 
         currentHealth = maxHealth;
         Debug.Log("Player Died");
@@ -139,14 +135,13 @@ public class PlayerHealth : MonoBehaviour
         //gameObject.transform.position = cp.GetCurrentCheckpoint().position;
 
         characterController.moveSpeed = 10f;
-        
-
-
+        characterController.jumpForce = 15f;        
     }
 
     private IEnumerator Cp()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.9f);
+        animator.ResetTrigger("Dead");
         gameObject.transform.position = cp.GetCurrentCheckpoint().position;
     }
 

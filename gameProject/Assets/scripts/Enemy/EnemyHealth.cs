@@ -10,7 +10,8 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private int currentHealth;
     [SerializeField] private GameObject itemPrefab;
     [SerializeField] private float knockbackForce = 5f;
-    
+    [SerializeField] private int point = 10;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -24,7 +25,7 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
-            CharacterController.playerScore += 10;
+            CharacterController.playerScore += point;
         }
         else
         {
