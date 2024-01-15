@@ -25,24 +25,17 @@ public class PlayerHealth : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         cp = gameObject.GetComponent<ChekPointSystem>();
         // sahne yüklendiðinde maxHealth ile currentHealthi eþitle
-        if (SceneManager.GetActiveScene().name == "level1") 
+        if (SceneManager.GetActiveScene().name == "level1")
         {
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(maxHealth);
         }
-        else
+        if (SceneManager.GetActiveScene().name == "level2")
         {
-            // kaydedilmiþ deðeri çek
-            if (PlayerPrefs.HasKey("PlayerHealth"))
-            {
-                currentHealth = PlayerPrefs.GetInt("PlayerHealth");
-            }
-            else
-            {
-                // baslangýc deðeri
-                currentHealth = Mathf.Clamp(maxHealth, 0, maxHealth);
-            }
+            currentHealth = maxHealth;
+            healthBar.SetMaxHealth(maxHealth);
         }
+       
     }
 
     private void OnDisable()
@@ -68,9 +61,7 @@ public class PlayerHealth : MonoBehaviour
         // max saðlýða sýnýrla
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
-        // saðlýk deðeri update
-        PlayerPrefs.SetInt("PlayerHealth", currentHealth);
-        PlayerPrefs.Save();
+       
 
         // Can 0'a düþerse karakteri öldür
         if (currentHealth == 0)
