@@ -130,7 +130,7 @@ public class PlayerHealth : MonoBehaviour
 
     private IEnumerator RespawnAfterDelay()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.3f);
 
         currentHealth = maxHealth;
         Debug.Log("Player Died");
@@ -146,7 +146,7 @@ public class PlayerHealth : MonoBehaviour
 
     private IEnumerator Cp()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(.5f);
         gameObject.transform.position = cp.GetCurrentCheckpoint().position;
     }
 
