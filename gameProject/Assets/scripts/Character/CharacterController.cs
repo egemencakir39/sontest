@@ -8,7 +8,7 @@ public class CharacterController : MonoBehaviour
 {
     soundManager SoundManagerScript;
 
-   [SerializeField] private float moveSpeed = 5f;
+   [SerializeField] public float moveSpeed = 5f;
    [SerializeField] private float jumpForce = 10f;
     public Transform groundCheck;
     public string groundTag = "Ground";

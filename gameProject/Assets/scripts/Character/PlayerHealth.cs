@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,17 +11,25 @@ public class PlayerHealth : MonoBehaviour
     soundManager SoundManagerScript;
     public int maxHealth = 100;
     public int currentHealth;
-   // public Transform respawnPoint;
+    // public Transform respawnPoint;
     private ChekPointSystem cp;
     public healthBar healthBar;
     private AudioSource audioSource;
     private float knockbackForce = 10f;
+    private bool isDead = false;
+    private bool canMove = true;
+    Rigidbody2D rb;
+    private CharacterController characterController;
+    Animator animator;
 
 
 
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
+        characterController = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody2D>();
         SoundManagerScript = GameObject.Find("SoundManager").GetComponent<soundManager>();
         audioSource = GetComponent<AudioSource>();
         cp = gameObject.GetComponent<ChekPointSystem>();
@@ -35,49 +44,69 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(maxHealth);
         }
-       
+
     }
 
-    private void OnDisable()
-    {
-        //health save
-        PlayerPrefs.SetInt("PlayerHealth", currentHealth);
-        PlayerPrefs.Save();
-    }
 
-    // health güncelle
+
+
     public void UpdateHealth(int amount)
     {
-        
+
         if (amount < 0)
         {
-          KnockBack();
+            KnockBack();
         }
 
 
-            currentHealth += amount;
+        currentHealth += amount;
         healthBar.SetHealth(currentHealth);
 
         // max saðlýða sýnýrla
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-
        
+
 
         // Can 0'a düþerse karakteri öldür
         if (currentHealth == 0)
         {
             die();
+            animator.SetTrigger("Dead");
         }
         healthBar.SetHealth(currentHealth);
     }
+
+    
+	
+
+	
     private void die()
     {
-        //yield return new WaitForSeconds(delay);
+        if (characterController != null)
+        {
+            characterController.moveSpeed = 0f;
+        }
 
-        currentHealth = maxHealth;
-        Debug.Log("Player Died");
-        gameObject.transform.position = cp.GetCurrentCheckpoint().position;
+
+        rb.velocity = Vector2.zero;
+
+
+        canMove = false;
+        isDead = true; // Ölüm durumunu aktif et
+        StartCoroutine(RespawnAfterDelay());
+        StartCoroutine(Cp());
+
+
+
+
+        
+
     }
+
+    
+
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Checkpoint"))
@@ -89,13 +118,38 @@ public class PlayerHealth : MonoBehaviour
     }
     private void KnockBack()
     {
-        Rigidbody2D playerRigidbody = GetComponent<Rigidbody2D>();
-        if (playerRigidbody != null)
+        
+        if (rb != null)
         {
             Vector2 knockbackDirection = new Vector2(-1f, 1f); // Örneðin, sola ve yukarýya bir knockback
-            playerRigidbody.velocity = Vector2.zero; // Önceki hýzý sýfýrla
-            playerRigidbody.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
+            rb.velocity = Vector2.zero; // Önceki hýzý sýfýrla
+            rb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
         }
     }
 
+
+    private IEnumerator RespawnAfterDelay()
+    {
+        yield return new WaitForSeconds(1.5f);
+
+        currentHealth = maxHealth;
+        Debug.Log("Player Died");
+        healthBar.SetMaxHealth(maxHealth);
+
+        //gameObject.transform.position = cp.GetCurrentCheckpoint().position;
+
+        characterController.moveSpeed = 10f;
+        
+
+
+    }
+
+    private IEnumerator Cp()
+    {
+        yield return new WaitForSeconds(1.5f);
+        gameObject.transform.position = cp.GetCurrentCheckpoint().position;
+    }
+
+
 }
+
