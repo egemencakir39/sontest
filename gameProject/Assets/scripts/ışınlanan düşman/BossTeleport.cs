@@ -45,7 +45,7 @@ public class BossTeleport : MonoBehaviour
         else
         {
             // Player solda, yüzü sola baksýn
-            transform.localScale = new Vector3(-2f, 2f, 2f);
+            transform.localScale = new Vector3(-5f, 2f, 2f);
         }
     }
 
@@ -92,6 +92,8 @@ public class BossTeleport : MonoBehaviour
                         direction.y = 0;
 
                         fire.GetComponent<Rigidbody2D>().velocity = direction.normalized * 10f;
+
+                        Destroy(fire, 3f);
                     }
 
                     yield return new WaitForSeconds(attackCooldown);
