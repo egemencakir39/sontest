@@ -362,6 +362,7 @@ public class CharacterController : MonoBehaviour
 
         enemyLight2D.color = originalColor;
     }
+    
     void PlayRandomAnimation()
     {
 
@@ -378,9 +379,9 @@ public class CharacterController : MonoBehaviour
         {
             SoundManagerScript.Attack1_();
         }
-        else if (selectedAnimation.name == "specialAttack")
+        else if (selectedAnimation.name == "attack3")
         {
-            SoundManagerScript.Attack2_();
+            SoundManagerScript.Attack1_();
         }
     }
 

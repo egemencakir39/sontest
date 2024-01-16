@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 99ce5c5062e81eb41ae377795eeb030a
+guid: 80071ef40a8f58048a5e3bebc682e732
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -50,7 +50,7 @@ TextureImporter:
   spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
-  alphaUsage: 0
+  alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy1_0
+      name: boss_savurma-Sheet_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 16
-        width: 35
-        height: 31
+        x: 23
+        y: 5
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 383f87f2a2e605d489dc22981d390277
-      internalID: -1686783828
+      spriteID: 0364856f163f3484fba28949122bebb4
+      internalID: 1107089243
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy1_1
+      name: boss_savurma-Sheet_1
       rect:
         serializedVersion: 2
-        x: 247
-        y: 16
-        width: 32
-        height: 31
+        x: 80
+        y: 12
+        width: 8
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2571f9f3c2420614993777ec4c4e2ca3
-      internalID: 629820847
+      spriteID: 3a0ed9da58718ee4ca858786a1a5f373
+      internalID: -874685340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy1_2
+      name: boss_savurma-Sheet_2
       rect:
         serializedVersion: 2
-        x: 476
-        y: 16
-        width: 28
-        height: 29
+        x: 103
+        y: 5
+        width: 65
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31a66940e896b39499236b6ff6f51554
-      internalID: -65482013
+      spriteID: 0d1e9a55acb99374aaa65993fa15ab13
+      internalID: 465012343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy1_3
+      name: boss_savurma-Sheet_3
       rect:
         serializedVersion: 2
-        x: 699
-        y: 16
-        width: 25
-        height: 31
+        x: 184
+        y: 5
+        width: 37
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff054f1a2c698f34fb1af3bd871098ec
-      internalID: -1617297502
+      spriteID: eee33b5dfbaa7534ab6dbeb471920afa
+      internalID: 279407988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy1_4
+      name: boss_savurma-Sheet_4
       rect:
         serializedVersion: 2
-        x: 924
-        y: 16
-        width: 27
-        height: 30
+        x: 248
+        y: 5
+        width: 75
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1482f7c3c0e462f4f9c0b5c32997746d
-      internalID: 1647239992
+      spriteID: cdf4a20671d99934a9ebd57f0a7664bb
+      internalID: -2105558399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy1_5
+      name: boss_savurma-Sheet_5
       rect:
         serializedVersion: 2
-        x: 1147
-        y: 16
-        width: 32
-        height: 30
+        x: 345
+        y: 5
+        width: 69
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04618a7adf2c8dc419a536dfcf2c7bd6
-      internalID: 1075966484
+      spriteID: ff5b49041f881834aae80f2c52f83bbc
+      internalID: -384278955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy1_6
+      name: boss_savurma-Sheet_6
       rect:
         serializedVersion: 2
-        x: 1370
-        y: 16
-        width: 39
-        height: 29
+        x: 428
+        y: 5
+        width: 63
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99e87688efead674fa8fa4bef2ea7e1a
-      internalID: -168056769
+      spriteID: a5f837c11a7606d4db625d9068c15430
+      internalID: 787217700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy1_7
+      name: boss_savurma-Sheet_7
       rect:
         serializedVersion: 2
-        x: 1597
-        y: 16
-        width: 34
-        height: 29
+        x: 512
+        y: 5
+        width: 66
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,20 +278,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c06246df3eaaf7e4686872f84a6e3ea1
-      internalID: 72152021
+      spriteID: dadda5eb68a14964688f77b339aba90a
+      internalID: -170954542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy1_8
+      name: boss_savurma-Sheet_9
       rect:
         serializedVersion: 2
-        x: 1829
-        y: 16
-        width: 30
-        height: 30
+        x: 596
+        y: 5
+        width: 70
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,71 +299,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bbc4be71f922e9418c79d9ca355c944
-      internalID: -1776554842
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy1_9
-      rect:
-        serializedVersion: 2
-        x: 2049
-        y: 16
-        width: 26
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a06b06d489f8b141bd06d8a219bc66e
-      internalID: 1828214982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy1_10
-      rect:
-        serializedVersion: 2
-        x: 2274
-        y: 16
-        width: 25
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e00bfd860871e4f4dab44d57bff3329e
-      internalID: 792339596
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy1_11
-      rect:
-        serializedVersion: 2
-        x: 2497
-        y: 16
-        width: 33
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb1e82063676b4a44a00d95f3206c738
-      internalID: 686228472
+      spriteID: 9da3e332d365a4448aec2d3e6b77f5c0
+      internalID: -1772986234
       vertices: []
       indices: 
       edges: []
@@ -379,18 +316,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      enemy1_0: -1686783828
-      enemy1_1: 629820847
-      enemy1_10: 792339596
-      enemy1_11: 686228472
-      enemy1_2: -65482013
-      enemy1_3: -1617297502
-      enemy1_4: 1647239992
-      enemy1_5: 1075966484
-      enemy1_6: -168056769
-      enemy1_7: 72152021
-      enemy1_8: -1776554842
-      enemy1_9: 1828214982
+      boss_savurma-Sheet_0: 1107089243
+      boss_savurma-Sheet_1: -874685340
+      boss_savurma-Sheet_2: 465012343
+      boss_savurma-Sheet_3: 279407988
+      boss_savurma-Sheet_4: -2105558399
+      boss_savurma-Sheet_5: -384278955
+      boss_savurma-Sheet_6: 787217700
+      boss_savurma-Sheet_7: -170954542
+      boss_savurma-Sheet_8: -43790353
+      boss_savurma-Sheet_9: -1772986234
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

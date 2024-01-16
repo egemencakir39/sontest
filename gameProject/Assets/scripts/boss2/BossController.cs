@@ -124,7 +124,7 @@ public class BossController : MonoBehaviour
     {
         chaseSpeed = 2;
         moveSpeed = 2;
-        animator.SetTrigger("Attack1");
+        animator.SetTrigger("Attack2");
         Debug.Log("Attack 2!");
         FlipTowardsPlayer(player.position.x);
         Invoke("RestartSpeed", .3f);
