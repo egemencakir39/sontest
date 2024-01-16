@@ -60,10 +60,12 @@ public class CharacterController : MonoBehaviour
     private float coolDownTime = .7f;
     private float mouseButton;
     public AnimationClip[] animations;
+    
 
 
     private void Start()
     {
+       
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         isGrounded = false;
@@ -78,6 +80,7 @@ public class CharacterController : MonoBehaviour
     }
     private void Update()
     {
+        
         if (canAttack && Input.GetMouseButtonDown(0) && Button0())//kýlýç vurma
         {
           // animator.SetTrigger("attack1");

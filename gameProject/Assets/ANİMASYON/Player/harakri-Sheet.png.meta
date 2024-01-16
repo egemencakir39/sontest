@@ -1,0 +1,651 @@
+fileFormatVersion: 2
+guid: 129c5f3ddcd7dca4aa89355a24780430
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 30
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: harakri-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 2
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e781d28839463741bb30b52e9b62bfd
+      internalID: -6952323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 2
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73516da350c3d0c47be1e9bcd577caee
+      internalID: -2044944496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 2
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f8175036c952b45aa15377d0232a55
+      internalID: -1280383454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 2
+        width: 38
+        height: 30
+      alignment: 9
+      pivot: {x: 0.49475098, y: 0.42682883}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f157b683dc345814cafc260573c0f792
+      internalID: 356216789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 2
+        width: 29
+        height: 38
+      alignment: 9
+      pivot: {x: 0.50000423, y: 0.39977822}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eea2e5ed42934344a3226677bdc66bc
+      internalID: 820265406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 2
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.49609375, y: 0.45308676}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6ff3560663859459752fb8eceaaf85
+      internalID: 1623385418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 2
+        width: 56
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cefc936be71af74cbb6afc2b5df1737
+      internalID: -556646366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 2
+        width: 39
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d1c5bc9578e284fa8ab8b10edd3b46
+      internalID: 980072600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1921
+        y: 2
+        width: 42
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cecd6f12be0d024580423131c64cb71
+      internalID: 15799743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 2148
+        y: 2
+        width: 41
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5, y: 0.51642245}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b7640a101663143ae69ddb2cfe795f
+      internalID: 386208663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2391
+        y: 2
+        width: 23
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5000106, y: 0.7329398}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a32c5ea1a3fce4d4d8a7ac6165894b29
+      internalID: 1470205879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 2607
+        y: 26
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e24af77d893d6bc409197a871dde25b8
+      internalID: -1784246401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 2613
+        y: 2
+        width: 22
+        height: 31
+      alignment: 9
+      pivot: {x: 0.528964, y: 0.78101784}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08fa0d7eb0c4c5241b96fbde6084530c
+      internalID: 1909323040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 2833
+        y: 24
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 581ecd11021a9714cb43591646eff461
+      internalID: 74485369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 2
+        width: 21
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5367373, y: 0.8986086}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db73b5d2be1ba4d459fe49d47a3f29ba
+      internalID: -1157497996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 3059
+        y: 2
+        width: 28
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5199498, y: 0.9991088}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceace840d1336e8499d5a73cc586066c
+      internalID: -202363720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 18
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d8eba816f38224387e1144112f5a7c
+      internalID: -1735331718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 3284
+        y: 2
+        width: 31
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5037487, y: 1.0455387}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8232b35dc7b9693498c17bbd7fdc2ec2
+      internalID: 1768278014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 3509
+        y: 2
+        width: 35
+        height: 19
+      alignment: 9
+      pivot: {x: 0.52240515, y: 1.0497408}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb5ae976a0e72e4295bd30c7d31c89c
+      internalID: 109629167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 2
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e149618a87240b14fa33d3a2b2ffbba0
+      internalID: -1989637090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 3734
+        y: 2
+        width: 44
+        height: 12
+      alignment: 9
+      pivot: {x: 0.50690806, y: 1.1026858}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b8148dca99b844ebb3849658532ae9
+      internalID: -2091365196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 3958
+        y: 2
+        width: 46
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5022928, y: 1.0712544}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55861edea94881446a179a3a7fb1236e
+      internalID: 1971072162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 4182
+        y: 2
+        width: 47
+        height: 12
+      alignment: 9
+      pivot: {x: 0.50797874, y: 1.0836574}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a013e0d3af0a6645a7fd2841ae0986d
+      internalID: -562879709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: harakri-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 4406
+        y: 2
+        width: 48
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5036214, y: 1.0243515}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef1146dd6810df4da69777ccfbfe620
+      internalID: -1686992534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      harakri-Sheet_0: -6952323
+      harakri-Sheet_1: -2044944496
+      harakri-Sheet_10: 1470205879
+      harakri-Sheet_11: -1784246401
+      harakri-Sheet_12: 1909323040
+      harakri-Sheet_13: 74485369
+      harakri-Sheet_14: -1157497996
+      harakri-Sheet_15: -202363720
+      harakri-Sheet_16: -1735331718
+      harakri-Sheet_17: 1768278014
+      harakri-Sheet_18: 109629167
+      harakri-Sheet_19: -1989637090
+      harakri-Sheet_2: -1280383454
+      harakri-Sheet_20: -2091365196
+      harakri-Sheet_21: 1971072162
+      harakri-Sheet_22: -562879709
+      harakri-Sheet_23: -1686992534
+      harakri-Sheet_3: 356216789
+      harakri-Sheet_4: 820265406
+      harakri-Sheet_5: 1623385418
+      harakri-Sheet_6: -556646366
+      harakri-Sheet_7: 980072600
+      harakri-Sheet_8: 15799743
+      harakri-Sheet_9: 386208663
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -16,11 +16,12 @@ public class PlayerHealth : MonoBehaviour
     public healthBar healthBar;
     private AudioSource audioSource;
     private float knockbackForce = 10f;
-    private bool isDead = false;
+    public bool isDead = false;
     private bool canMove = true;
     Rigidbody2D rb;
     private CharacterController characterController;
     Animator animator;
+   
 
 
 
@@ -89,13 +90,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void die()
     {
-        if (characterController != null)
-        {
-            characterController.moveSpeed = 0f;
-            characterController.jumpForce = 0f;
-        }
-
-
+          
         rb.velocity = Vector2.zero;
 
 
@@ -103,12 +98,14 @@ public class PlayerHealth : MonoBehaviour
         isDead = true; // Ölüm durumunu aktif et
         StartCoroutine(RespawnAfterDelay());
         StartCoroutine(Cp());
+        if (characterController != null)
+        {
+            characterController.enabled = false;
 
+            // Belirli bir süre sonra scripti tekrar etkinleþtir
+            Invoke("Etkinlestir", 2f);
+        }
     }
-
-    
-
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -133,24 +130,30 @@ public class PlayerHealth : MonoBehaviour
 
     private IEnumerator RespawnAfterDelay()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2f);
 
         currentHealth = maxHealth;
         Debug.Log("Player Died");
         healthBar.SetMaxHealth(maxHealth);
 
         //gameObject.transform.position = cp.GetCurrentCheckpoint().position;
-
-        characterController.moveSpeed = 10f;
-        characterController.jumpForce = 15f;        
+        
     }
 
     private IEnumerator Cp()
     {
         
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2f);
         animator.ResetTrigger("Dead");
         gameObject.transform.position = cp.GetCurrentCheckpoint().position;
+    }
+    void Etkinlestir()
+    {
+        // Scripti tekrar etkinleþtir
+        if (characterController != null)
+        {
+            characterController.enabled = true;
+        }
     }
 
 

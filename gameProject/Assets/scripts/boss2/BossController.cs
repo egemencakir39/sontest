@@ -111,20 +111,32 @@ public class BossController : MonoBehaviour
 
     void Attack1()
     {
+        
         animator.SetTrigger("Attack1");
         Debug.Log("Attack 1!");
         FlipTowardsPlayer(player.position.x);
+        chaseSpeed = 2;
+        moveSpeed = 2;
+        Invoke("RestartSpeed", .3f);
     }
 
     void Attack2()
     {
+        chaseSpeed = 2;
+        moveSpeed = 2;
         animator.SetTrigger("Attack1");
         Debug.Log("Attack 2!");
         FlipTowardsPlayer(player.position.x);
+        Invoke("RestartSpeed", .3f);
     }
 
-   
 
+    void RestartSpeed()
+    {
+        // Orijinal hýz deðerlerine geri dön
+        chaseSpeed = 4f;
+        moveSpeed = 5f;
+    }
     void FlipTowardsPlayer(float playerX)
     {
         // Yürüyüþ yönüne göre dönüþ
@@ -149,5 +161,9 @@ public class BossController : MonoBehaviour
         {
             transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); // Ters yönde
         }
+    }
+    public void PlayerDead()
+    {
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 }
