@@ -699,6 +699,7 @@ MonoBehaviour:
   currentHealth: 0
   itemPrefab: {fileID: 4249197368883534085, guid: a14bc342f809be449a14e997dc8252f7, type: 3}
   knockbackForce: 5
+  point: 10
 --- !u!61 &35505195
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1579,6 +1580,7 @@ MonoBehaviour:
   currentHealth: 0
   itemPrefab: {fileID: 8966563943597263660, guid: 8ee550ae1670e56448239314b2a2680f, type: 3}
   knockbackForce: 5
+  point: 10
 --- !u!114 &129970956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13883,6 +13885,7 @@ MonoBehaviour:
   currentHealth: 0
   itemPrefab: {fileID: 8966563943597263660, guid: 8ee550ae1670e56448239314b2a2680f, type: 3}
   knockbackForce: 5
+  point: 10
 --- !u!70 &298473666
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -14389,7 +14392,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  detectionRange: 10
+  detectionRangeX: 8
+  detectionRangeY: 2
 --- !u!50 &501849671
 Rigidbody2D:
   serializedVersion: 4
@@ -14428,7 +14432,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1666666, y: 1.0353515}
+    oldSize: {x: 1.1666666, y: 1.0333333}
     newSize: {x: 1.1666666, y: 1.0353515}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -14454,7 +14458,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1666666, y: 1.0353515}
+    oldSize: {x: 1.1666666, y: 1.0333333}
     newSize: {x: 1.1666666, y: 1.0353515}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -16276,6 +16280,8 @@ MonoBehaviour:
   bow_: {fileID: 8300000, guid: 5f3fa711d6e2a5248bb17528ef38ebb6, type: 3}
   CheckPoint: {fileID: 8300000, guid: cae2ddf99976e394bb804bc240d94f7f, type: 3}
   Point: {fileID: 8300000, guid: 396fd6bf4dcd3124c871c9f805f228d3, type: 3}
+  atack2: {fileID: 0}
+  takingDamage: {fileID: 0}
 --- !u!82 &860029993
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16640,7 +16646,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025502413}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 135.53, y: 19.28, z: 0}
+  m_LocalPosition: {x: 249.7, y: 39.9, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16666,7 +16672,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   jumpForce: 15
-  extraJumps: 1
+  groundCheck: {fileID: 859444722}
+  groundTag: Ground
   dashingPower: 15
   dashingTime: 0.3
   dashingCoolDown: 1
@@ -16685,6 +16692,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 057f431937954b64195ad76e731e0a3c, type: 3}
   - {fileID: 8300000, guid: c56eca7eae774a5409bc3ef4ab48f898, type: 3}
   SpecialAttackSword: {fileID: 106044803}
+  specialAttackDamage: 20
+  enemyLight2D: {fileID: 0}
+  animations: []
 --- !u!96 &1025502419
 TrailRenderer:
   serializedVersion: 2
@@ -22774,6 +22784,7 @@ GameObject:
   - component: {fileID: 1968919929}
   - component: {fileID: 1968919934}
   - component: {fileID: 1968919935}
+  - component: {fileID: 1968919936}
   m_Layer: 7
   m_Name: "\u0131\u015F\u0131nlanan enemy"
   m_TagString: enemy
@@ -22931,6 +22942,7 @@ MonoBehaviour:
   currentHealth: 0
   itemPrefab: {fileID: 4249197368883534085, guid: a14bc342f809be449a14e997dc8252f7, type: 3}
   knockbackForce: 5
+  point: 10
 --- !u!61 &1968919935
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22957,6 +22969,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &1968919936
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968919928}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c7d3aaecbd982c549a26f0b6000b6917, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1972324975
 GameObject:
   m_ObjectHideFlags: 0

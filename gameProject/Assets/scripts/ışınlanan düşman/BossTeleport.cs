@@ -15,7 +15,12 @@ public class BossTeleport : MonoBehaviour
     public float attackCooldown = 2f;
     private Transform player;
     public float teleportCoolDown = 2;
+    Animator animator;
 
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -45,7 +50,7 @@ public class BossTeleport : MonoBehaviour
         else
         {
             // Player solda, yüzü sola baksýn
-            transform.localScale = new Vector3(-5f, 2f, 2f);
+            transform.localScale = new Vector3(-2f, 2f, 2f);
         }
     }
 
@@ -76,10 +81,13 @@ public class BossTeleport : MonoBehaviour
             if (distanceToPlayer <= 10f && !isAttacking)
             {
                 isAttacking = true;
+                animator.SetTrigger("attackboss");
                 UpdateFacingDirection(player.position);
 
+                yield return new WaitForSeconds(0.5f);
                 try
                 {
+                    
                     if (enemyBullet != null && firePoint != null)
                     {
                         GameObject fire = Instantiate(enemyBullet, firePoint.position, Quaternion.identity);
