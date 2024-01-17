@@ -61089,7 +61089,7 @@ MonoBehaviour:
   currentHealth: 0
   itemPrefab: {fileID: 5659742032159470425, guid: 2ae7b5266d16aea44a79b7efd3fc4d51, type: 3}
   knockbackForce: 6
-  point: 10
+  point: 25
 --- !u!114 &235826703
 MonoBehaviour:
   m_ObjectHideFlags: 0
