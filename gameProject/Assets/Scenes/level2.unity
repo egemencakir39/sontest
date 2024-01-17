@@ -115738,11 +115738,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pos1: {fileID: 1648118113}
   pos2: {fileID: 2126366966}
-  teleportDistance: 4
+  teleportDistance: 3
   firePoint: {fileID: 528374959}
   enemyBullet: {fileID: 2939288390875497000, guid: 777b54894418c274cb18c463cc1f0cbd, type: 3}
   attackCooldown: 1
-  teleportCoolDown: 2
+  teleportCoolDown: 4
 --- !u!50 &1612428722
 Rigidbody2D:
   serializedVersion: 4
