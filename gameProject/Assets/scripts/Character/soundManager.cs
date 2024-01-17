@@ -13,6 +13,7 @@ public class soundManager : MonoBehaviour
     [SerializeField] private AudioClip Point;
     [SerializeField] private AudioClip atack2;
     [SerializeField] private AudioClip takingDamage;
+    [SerializeField] private AudioClip Dead;
 
     void Start()
     {
@@ -49,5 +50,9 @@ public class soundManager : MonoBehaviour
     public void takingDamage_()
     {
         audioSource.PlayOneShot(takingDamage);
+    }
+    public void Dead_()
+    {
+        audioSource.PlayOneShot(Dead);
     }
 }

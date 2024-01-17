@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
     public healthBar healthBar;
     private AudioSource audioSource;
     private float knockbackForce = 10f;
-    public bool isDead = false;
+    private bool isDead = false;
     private bool canMove = true;
     Rigidbody2D rb;
     private CharacterController characterController;
@@ -105,6 +105,7 @@ public class PlayerHealth : MonoBehaviour
             // Belirli bir süre sonra scripti tekrar etkinleþtir
             Invoke("Etkinlestir", 2f);
         }
+        SoundManagerScript.Dead_();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

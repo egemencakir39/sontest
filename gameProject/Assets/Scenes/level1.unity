@@ -18519,8 +18519,8 @@ Tilemap:
   - first: {x: -11, y: -34, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileIndex: 5
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -54880,7 +54880,7 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 23
     m_Data: {fileID: 11400000, guid: 34d1095c4f4be8b4f9b3e1266da97449, type: 2}
-  - m_RefCount: 382
+  - m_RefCount: 381
     m_Data: {fileID: 11400000, guid: 895290c18cceb6c4199b1b9eb62fff7a, type: 2}
   - m_RefCount: 172
     m_Data: {fileID: 11400000, guid: cfd7f7e4c493f6c45b7a71202ba913e8, type: 2}
@@ -54888,7 +54888,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 0157b2ac8baf50c40ae0ea942f17e23a, type: 2}
   - m_RefCount: 1266
     m_Data: {fileID: 11400000, guid: 5e2e2801b3d32fa4fa1bd97a9a6c211b, type: 2}
-  - m_RefCount: 13
+  - m_RefCount: 14
     m_Data: {fileID: 11400000, guid: 108e6165f7a91b44e8701711b2d1a23c, type: 2}
   - m_RefCount: 145
     m_Data: {fileID: 11400000, guid: 7b090590beb233a43ac9cb2b746aad07, type: 2}
@@ -54935,7 +54935,7 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 23
     m_Data: {fileID: 372390009, guid: 5fe5454ec8605de43809133b020d1b69, type: 3}
-  - m_RefCount: 382
+  - m_RefCount: 381
     m_Data: {fileID: -1766307359, guid: 5fe5454ec8605de43809133b020d1b69, type: 3}
   - m_RefCount: 172
     m_Data: {fileID: -1493193376, guid: 5fe5454ec8605de43809133b020d1b69, type: 3}
@@ -54955,7 +54955,7 @@ Tilemap:
     m_Data: {fileID: 2097316097, guid: 5fe5454ec8605de43809133b020d1b69, type: 3}
   - m_RefCount: 2951
     m_Data: {fileID: -1727392612, guid: 5fe5454ec8605de43809133b020d1b69, type: 3}
-  - m_RefCount: 13
+  - m_RefCount: 14
     m_Data: {fileID: 1809391310, guid: 5fe5454ec8605de43809133b020d1b69, type: 3}
   - m_RefCount: 12
     m_Data: {fileID: -836504486, guid: 5fe5454ec8605de43809133b020d1b69, type: 3}
@@ -74601,7 +74601,6 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 80
   healthBar: {fileID: 611635855}
-  isDead: 0
 --- !u!212 &1488225973
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -74823,6 +74822,7 @@ MonoBehaviour:
   Point: {fileID: 8300000, guid: 396fd6bf4dcd3124c871c9f805f228d3, type: 3}
   atack2: {fileID: 8300000, guid: 97a9ef47e32059b4093a699bfeceb369, type: 3}
   takingDamage: {fileID: 8300000, guid: b9a5a7840c99bdd4982ce0b26066c9ca, type: 3}
+  Dead: {fileID: 8300000, guid: a8ffe85d6e1825c4ca520c430a99a8d5, type: 3}
 --- !u!82 &1504395372
 AudioSource:
   m_ObjectHideFlags: 0
