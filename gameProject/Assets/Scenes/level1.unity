@@ -66452,7 +66452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 0
-  itemPrefab: {fileID: 8966563943597263660, guid: 8ee550ae1670e56448239314b2a2680f, type: 3}
+  itemPrefab: {fileID: 402968069}
   knockbackForce: 5
   point: 10
 --- !u!114 &815007688
@@ -68515,7 +68515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 0
-  itemPrefab: {fileID: 4249197368883534085, guid: a14bc342f809be449a14e997dc8252f7, type: 3}
+  itemPrefab: {fileID: 402968069}
   knockbackForce: 5
   point: 0
 --- !u!1 &1028026917
@@ -72526,7 +72526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 0
-  itemPrefab: {fileID: 8966563943597263660, guid: 8ee550ae1670e56448239314b2a2680f, type: 3}
+  itemPrefab: {fileID: 402968069}
   knockbackForce: 5
   point: 10
 --- !u!114 &1346484123
@@ -74661,7 +74661,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1488225959}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.2, y: 2, z: 0}
+  m_LocalPosition: {x: -5.2, y: 1.892, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -80687,7 +80687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 0
-  itemPrefab: {fileID: 8966563943597263660, guid: 8ee550ae1670e56448239314b2a2680f, type: 3}
+  itemPrefab: {fileID: 402968069}
   knockbackForce: 5
   point: 10
 --- !u!114 &2065787120
