@@ -45,12 +45,12 @@ public class BossTeleport : MonoBehaviour
         if (targetPosition.x > transform.position.x)
         {
             // Player saðda, yüzü saða baksýn
-            transform.localScale = new Vector3(2f, 2f, 2f);
+            transform.localScale = new Vector3(2.5f, 2.5f, 2f);
         }
         else
         {
             // Player solda, yüzü sola baksýn
-            transform.localScale = new Vector3(-2f, 2f, 2f);
+            transform.localScale = new Vector3(-2.5f, 2.5f, 2f);
         }
     }
 

@@ -7984,7 +7984,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528374958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.419, y: 0.121, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -115773,11 +115773,11 @@ MonoBehaviour:
   textComponent: {fileID: 1869787450}
   backgroundPanel: {fileID: 1903028297}
   lines:
-  - "K\xD6YL\xDC:Demekki \xF6nce ma\u011Faray\u0131 ge\xE7ebildin ha?"
+  - "VILLAGER:Demekki \xF6nce ki ma\u011Faray\u0131 ge\xE7ebildin ha?"
   - "PLAYER:Biraz zorlu oldu ama ge\xE7ebildim."
-  - "K\xD6YL\xDC:\u015Eimdi buradaki anahtarlar\u0131 topla ve a\u011Fa\xE7lar\u0131
+  - "VILLAGER:\u015Eimdi buradaki anahtarlar\u0131 topla ve a\u011Fa\xE7lar\u0131
     takip et."
-  - "K\xD6YL\xDC:Unutma burada 9 anahtar toplaman gerekecek."
+  - VILLAGER:Unutma burada 9 anahtar toplaman gerekecek.
   textSpeed: 0.001
   isPersistent: 0
 --- !u!61 &1477801615
@@ -116917,7 +116917,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: -0.000079393}
+  m_AnchoredPosition: {x: 0, y: -0.00008010864}
   m_SizeDelta: {x: 0, y: -8.5051}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1515740037
@@ -118479,7 +118479,7 @@ Transform:
   m_GameObject: {fileID: 1612428716}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -31.5, y: -26.69, z: -1.6639795}
-  m_LocalScale: {x: 2.3, y: 2.3, z: 2}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2054237860}
@@ -118565,10 +118565,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pos1: {fileID: 1648118113}
   pos2: {fileID: 2126366966}
-  teleportDistance: 4
+  teleportDistance: 5
   firePoint: {fileID: 528374959}
   enemyBullet: {fileID: 2939288390875497000, guid: 777b54894418c274cb18c463cc1f0cbd, type: 3}
-  attackCooldown: 2.5
+  attackCooldown: 2
   teleportCoolDown: 4
 --- !u!50 &1612428722
 Rigidbody2D:
