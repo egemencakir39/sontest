@@ -66342,7 +66342,7 @@ MonoBehaviour:
   Damage: 10
   chaseSpeed: 3
   chaseDistance: 10
-  attackDistance: 5
+  attackDistance: 3
   timeBetweenAttacks: 1
 --- !u!212 &869136353
 SpriteRenderer:
@@ -81357,7 +81357,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b324a4685d480b346b084e8a5dbacbde, type: 3}
+  m_Sprite: {fileID: -547629874, guid: 84873522082196348b931e3f46de09e9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
