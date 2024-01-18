@@ -60297,8 +60297,8 @@ MonoBehaviour:
   Damage: 10
   chaseSpeed: 3
   chaseDistance: 10
-  attackDistance: 10
-  timeBetweenAttacks: 1
+  attackDistance: 3
+  timeBetweenAttacks: 2
 --- !u!95 &235826704
 Animator:
   serializedVersion: 5
@@ -66343,7 +66343,7 @@ MonoBehaviour:
   chaseSpeed: 3
   chaseDistance: 10
   attackDistance: 3
-  timeBetweenAttacks: 1
+  timeBetweenAttacks: 2
 --- !u!212 &869136353
 SpriteRenderer:
   m_ObjectHideFlags: 0
