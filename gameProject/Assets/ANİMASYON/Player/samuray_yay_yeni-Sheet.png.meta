@@ -1,0 +1,443 @@
+fileFormatVersion: 2
+guid: 927e9121a3bf0b04ab2dd513c1cae148
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 30
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: samuray_yay_yeni-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 15
+        width: 40
+        height: 28
+      alignment: 9
+      pivot: {x: 0.49726123, y: 0.531304}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16b7082db982554ea71cc49bcabcfa9
+      internalID: -175565220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_yay_yeni-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 15
+        width: 40
+        height: 28
+      alignment: 9
+      pivot: {x: 0.49726143, y: 0.543043}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2d05deb52b8c548b0de08314edf48b
+      internalID: 716878251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_yay_yeni-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 15
+        width: 40
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5029728, y: 0.53820074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4405080c52eea8d4c9d990a146e17186
+      internalID: 556281065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_yay_yeni-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 15
+        width: 40
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5055588, y: 0.5476514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac386a82b4a97b42bd8d0a085da8bd2
+      internalID: 1458909337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_yay_yeni-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 15
+        width: 40
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5, y: 0.54651356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 135f710c1631c3c4cb9c98da87519a4f
+      internalID: -1754046360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_yay_yeni-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 15
+        width: 41
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02aa74b749d97fb4fa2d44e6d6386475
+      internalID: 1230837346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_yay_yeni-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 15
+        width: 40
+        height: 34
+      alignment: 9
+      pivot: {x: 0.503862, y: 0.44996375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f66768c65ed5a2e4bb3c69a548fc8fa1
+      internalID: 2080554549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_yay_yeni-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 15
+        width: 45
+        height: 36
+      alignment: 9
+      pivot: {x: 0.49691433, y: 0.44211516}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c8b9bc678e3c9644b6c96187ac8db5a
+      internalID: -1190797035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_yay_yeni-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 15
+        width: 45
+        height: 37
+      alignment: 9
+      pivot: {x: 0.49695095, y: 0.43699315}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d921980c677cef41b431e4cee2ab20d
+      internalID: -489796890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_yay_yeni-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 15
+        width: 41
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5104504, y: 0.4334197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ffd0c927e743943b04c09aea45c910
+      internalID: -2106947473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_yay_yeni-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 15
+        width: 38
+        height: 37
+      alignment: 9
+      pivot: {x: 0.58631176, y: 0.42022103}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 918d041f1d83a91438c297f1d822e619
+      internalID: -1165304618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_yay_yeni-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 15
+        width: 35
+        height: 37
+      alignment: 9
+      pivot: {x: 0.55818915, y: 0.42424867}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248854584a097874f966063e6e893d63
+      internalID: -1369094077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_yay_yeni-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 15
+        width: 35
+        height: 37
+      alignment: 9
+      pivot: {x: 0.524013, y: 0.4204948}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b63859306e8824783016248bf62a7b
+      internalID: -527609508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samuray_yay_yeni-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 15
+        width: 36
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5031196, y: 0.48293045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9361b3cb3e69674c90a579b45a06359
+      internalID: 938776764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      samuray_yay_yeni-Sheet_0: -175565220
+      samuray_yay_yeni-Sheet_1: 716878251
+      samuray_yay_yeni-Sheet_10: -1165304618
+      samuray_yay_yeni-Sheet_11: -1369094077
+      samuray_yay_yeni-Sheet_12: -527609508
+      samuray_yay_yeni-Sheet_13: 938776764
+      samuray_yay_yeni-Sheet_2: 556281065
+      samuray_yay_yeni-Sheet_3: 1458909337
+      samuray_yay_yeni-Sheet_4: -1754046360
+      samuray_yay_yeni-Sheet_5: 1230837346
+      samuray_yay_yeni-Sheet_6: 2080554549
+      samuray_yay_yeni-Sheet_7: -1190797035
+      samuray_yay_yeni-Sheet_8: -489796890
+      samuray_yay_yeni-Sheet_9: -2106947473
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
