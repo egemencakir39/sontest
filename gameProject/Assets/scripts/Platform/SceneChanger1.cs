@@ -13,6 +13,7 @@ public class SceneChanger1 : MonoBehaviour
     [SerializeField] private int requiredKeys = 5;
     [SerializeField] private TMP_Text keyCountText;
     private AudioSource audioSource;
+   
 
     private void Update()
     {
@@ -34,9 +35,10 @@ public class SceneChanger1 : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("anahtar"))
         {
+            
             collectKey();
             Destroy(collision.gameObject);
-            Debug.Log("alýndý anahtar");
+            Debug.Log("Anahtar alýndý");
             SoundManagerScript.Point_();
             Debug.Log("Key Count: " + collectedKeys);
         }

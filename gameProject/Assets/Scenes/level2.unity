@@ -115773,11 +115773,14 @@ MonoBehaviour:
   textComponent: {fileID: 1869787450}
   backgroundPanel: {fileID: 1903028297}
   lines:
-  - "VILLAGER:Demekki \xF6nce ki ma\u011Faray\u0131 ge\xE7ebildin ha?"
-  - "PLAYER:Biraz zorlu oldu ama ge\xE7ebildim."
-  - "VILLAGER:\u015Eimdi buradaki anahtarlar\u0131 topla ve a\u011Fa\xE7lar\u0131
-    takip et."
-  - VILLAGER:Unutma burada 9 anahtar toplaman gerekecek.
+  - "VILLAGER: Buraya gelebildi\u011Fine g\xF6re t\xFCm anahtarlar\u0131 toplam\u0131\u015F
+    olmal\u0131s\u0131n."
+  - "PLAYER:Bu kadar fazla d\xFC\u015Fman oldu\u011Funda bahsetmemistin."
+  - "VILLAGER:Evet, buraya haz\u0131r m\u0131s\u0131n diye seni test etmek istemi\u015Ftim."
+  - "Krali\xE7e hakl\u0131ym\u0131s, sen bu g\xF6revi tamamlayabilecek seviyedesin."
+  - "Simdi sana ok ve yay verece\u011Fim."
+  - "Bu ok ve yay\u0131 E tu\u015Fu ile kullanabilirsin."
+  - "D\xFC\u015Fmanlar\u0131 \xF6ld\xFCr anahtarlar\u0131 topla."
   textSpeed: 0.001
   isPersistent: 0
 --- !u!61 &1477801615
@@ -128991,7 +128994,7 @@ MonoBehaviour:
   chaseSpeed: 3
   chaseDistance: 10
   attackDistance: 3
-  timeBetweenAttacks: 1
+  timeBetweenAttacks: 2
 --- !u!212 &2115618844
 SpriteRenderer:
   m_ObjectHideFlags: 0

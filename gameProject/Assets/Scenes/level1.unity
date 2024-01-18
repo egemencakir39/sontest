@@ -73538,7 +73538,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1.7357354
-  MaxDistance: 2.8294163
+  MaxDistance: 3.1837952
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -78581,12 +78581,16 @@ MonoBehaviour:
   textComponent: {fileID: 115022683}
   backgroundPanel: {fileID: 2140682404}
   lines:
-  - "VILLAGER:7 tane anahtar var bu anahtarlar\u0131 toplay\u0131p g\xF6revine devam
-    edebilirsin"
-  - PLAYER:Anahtarlar nerede.
-  - "VILLAGER:Baz\u0131lar\u0131 ma\u011Faran\u0131n i\xE7inde."
-  - "PLAYER:Baz\u0131lar\u0131..  Di\u011Ferleri nerede."
-  - "VILLAGER:Di\u011Ferlerini d\xFCsmanlar\u0131 \xF6ld\xFCr\xFCnce alabilirsin."
+  - "VILLAGER:Krali\xE7enin g\xF6nderdi\u011Fi samuray sen olmal\u0131s\u0131n."
+  - "PLAYER:Evet, bilgilendirecek ki\u015Fi sen misin?"
+  - "VILLAGER:Do\u011Fru,bu zorlu patikada ne yapman gerekti\u011Fini s\xF6yleyece\u011Fim."
+  - Player:Dinliyorum.
+  - VILLAGER:A/D ile hareket edersin.
+  - "Sol fare tu\u015Fu ile atak yapars\u0131n."
+  - "Shift ile dash atars\u0131n."
+  - "K\u0131l\u0131\xE7 toplay\u0131nca F ile \xF6zel yetene\u011Fini kullanabilirsin."
+  - "Su anki g\xF6revin sa\xE7\u0131lm\u0131\u015F anahtarlar\u0131 toplamak. "
+  - "Sonraki b\xF6l\xFCmde yeniden kar\u015F\u0131la\u015Faca\u011F\u0131z."
   textSpeed: 0.001
   isPersistent: 0
 --- !u!61 &1947931922

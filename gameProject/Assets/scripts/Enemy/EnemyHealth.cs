@@ -40,12 +40,13 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
-        
         Instantiate(itemPrefab, transform.position, Quaternion.identity);
-
+       
         Destroy(gameObject); // Düþman objesini yok edin
 
     }
+ 
+
     void OnTriggerEnter2d(Collider other)
     {
         if (other.gameObject == itemPrefab)
