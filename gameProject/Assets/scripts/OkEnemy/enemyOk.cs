@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossTeleport : MonoBehaviour
+public class enemyOk : MonoBehaviour
 {
     public Transform pos1;
     public Transform pos2;
@@ -45,12 +45,12 @@ public class BossTeleport : MonoBehaviour
         if (targetPosition.x > transform.position.x)
         {
             // Player saðda, yüzü saða baksýn
-            transform.localScale = new Vector3(2f, 2f, 2f);
+            transform.localScale = new Vector3(2.5f, 2.5f, 2f);
         }
         else
         {
             // Player solda, yüzü sola baksýn
-            transform.localScale = new Vector3(-2f, 2f, 2f);
+            transform.localScale = new Vector3(-2.5f, 2.5f, 2f);
         }
     }
 
@@ -81,13 +81,13 @@ public class BossTeleport : MonoBehaviour
             if (distanceToPlayer <= 10f && !isAttacking)
             {
                 isAttacking = true;
-                animator.SetTrigger("attackboss");
+                animator.SetTrigger("AtackYay");
                 UpdateFacingDirection(player.position);
 
-                yield return new WaitForSeconds(.5f);
+                yield return new WaitForSeconds(1f);
                 try
                 {
-                    
+
                     if (enemyBullet != null && firePoint != null)
                     {
                         GameObject fire = Instantiate(enemyBullet, firePoint.position, Quaternion.identity);
@@ -99,7 +99,7 @@ public class BossTeleport : MonoBehaviour
                         // Y ekseninde hareket etmesini engelle (sadece saða veya sola gitmesini saðla)
                         direction.y = 0;
 
-                        fire.GetComponent<Rigidbody2D>().velocity = direction.normalized * 10f;
+                        fire.GetComponent<Rigidbody2D>().velocity = direction.normalized * 15f;
 
                         Destroy(fire, 3f);
                     }

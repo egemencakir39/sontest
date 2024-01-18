@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class CollectItem : MonoBehaviour
 {
-    public int healthToAdd = 10;  
+    public int healthToAdd = 10;
+    soundManager SoundManagerScript;
+
+
+    private void Start()
+    {
+        SoundManagerScript = GameObject.Find("SoundManager").GetComponent<soundManager>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -13,7 +20,7 @@ public class CollectItem : MonoBehaviour
             // saðlýk+
             other.GetComponent<PlayerHealth>().UpdateHealth(healthToAdd);
 
-            
+            SoundManagerScript.Point_();
             Destroy(gameObject);
         }
     }

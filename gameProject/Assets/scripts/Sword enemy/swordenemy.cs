@@ -114,28 +114,21 @@ public class swordenemy : MonoBehaviour
         animator.SetTrigger("attack1");
         Debug.Log("Attack 1!");
         FlipTowardsPlayer(player.position.x);
-        chaseSpeed = 1;
-        moveSpeed = 1;
-        Invoke("RestartSpeed", .3f);
+       
     }
 
     void Attack2()
     {
-        chaseSpeed = 1;
-        moveSpeed = 1;
+        
+        
         animator.SetTrigger("attack1");
         Debug.Log("Attack 2!");
         FlipTowardsPlayer(player.position.x);
-        Invoke("RestartSpeed", .3f);
+       
     }
 
 
-    void RestartSpeed()
-    {
-        // Orijinal hýz deðerlerine geri dön
-        chaseSpeed = 3f;
-        moveSpeed = 3f;
-    }
+   
     void FlipTowardsPlayer(float playerX)
     {
         // Yürüyüþ yönüne göre dönüþ

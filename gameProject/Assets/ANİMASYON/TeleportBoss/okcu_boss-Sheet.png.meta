@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4627d70315a670e4e8674aff5fb45938
+guid: 0cfed6737d3b8bb48a5ec2a28ad0e137
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -67,10 +67,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,295 +117,295 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dusman_yay_son_-Sheet_0
+      name: okcu_boss-Sheet_0
       rect:
         serializedVersion: 2
         x: 31
-        y: 15
+        y: 5
         width: 31
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 27
+      alignment: 9
+      pivot: {x: 0.50442606, y: 0.54319036}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46f87355a9de7bc43b8a295962abf29a
-      internalID: 614848359
+      spriteID: 09712662544c525478f9d8f28226f326
+      internalID: 1568339254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dusman_yay_son_-Sheet_1
+      name: okcu_boss-Sheet_1
       rect:
         serializedVersion: 2
         x: 126
-        y: 15
+        y: 5
         width: 31
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5000015, y: 0.5409988}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93d1b60ee5b4f9e4c821ccb827b9be59
-      internalID: -239390555
+      spriteID: 85bcf708a7d0ada4dbc4c2b50f439b90
+      internalID: -1862159605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dusman_yay_son_-Sheet_2
+      name: okcu_boss-Sheet_2
       rect:
         serializedVersion: 2
         x: 215
-        y: 15
+        y: 5
         width: 37
-        height: 26
+        height: 27
       alignment: 9
-      pivot: {x: 0.53056335, y: 0.51087385}
+      pivot: {x: 0.51859266, y: 0.54304683}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c65d6919df7db448a62773dbfde79d1
-      internalID: -275560810
+      spriteID: a9455708ada7e1043898a5d03aa69a04
+      internalID: 1858498508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dusman_yay_son_-Sheet_3
+      name: okcu_boss-Sheet_3
       rect:
         serializedVersion: 2
         x: 318
-        y: 15
+        y: 5
         width: 29
-        height: 26
+        height: 27
       alignment: 9
-      pivot: {x: 0.5061014, y: 0.5272321}
+      pivot: {x: 0.5, y: 0.5383705}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efd7efe49e7a61341aad5fec03f93755
-      internalID: -231266486
+      spriteID: b894967b6ed9466468446786a6d6b0b6
+      internalID: 371888861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dusman_yay_son_-Sheet_4
+      name: okcu_boss-Sheet_4
       rect:
         serializedVersion: 2
         x: 413
-        y: 15
+        y: 5
         width: 30
         height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.49999592, y: 0.5368926}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d43f94ad84348e948bba2f586657dc54
-      internalID: 1212319607
+      spriteID: fd3647150a3c87240ab2b1547e70f0c2
+      internalID: 1423257324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dusman_yay_son_-Sheet_5
+      name: okcu_boss-Sheet_5
       rect:
         serializedVersion: 2
         x: 510
-        y: 15
+        y: 5
         width: 29
         height: 29
       alignment: 9
-      pivot: {x: 0.49307567, y: 0.45842525}
+      pivot: {x: 0.5, y: 0.509939}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6ab2a094f6da624180a67d4726dd22b
-      internalID: -668287521
+      spriteID: 5f7a83f61347bb246b0c344249e1b7b9
+      internalID: -1511210134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dusman_yay_son_-Sheet_6
+      name: okcu_boss-Sheet_6
       rect:
         serializedVersion: 2
         x: 605
-        y: 15
+        y: 5
         width: 28
         height: 34
       alignment: 9
-      pivot: {x: 0.5, y: 0.409076}
+      pivot: {x: 0.49999782, y: 0.42572713}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f902e992267e7b541a9d820d9f073bc0
-      internalID: -2039059819
+      spriteID: 8e3bf52d9bca2cd44b698320e2cedb26
+      internalID: -2119910565
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dusman_yay_son_-Sheet_7
+      name: okcu_boss-Sheet_7
       rect:
         serializedVersion: 2
         x: 698
-        y: 15
+        y: 5
         width: 34
         height: 36
       alignment: 9
-      pivot: {x: 0.48765832, y: 0.38735124}
+      pivot: {x: 0.48083854, y: 0.4135366}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f381d5adcc7639048b3b64116186be75
-      internalID: -1917628071
+      spriteID: 144958aa6a60b394c945a92facecff36
+      internalID: -1168335971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dusman_yay_son_-Sheet_8
+      name: okcu_boss-Sheet_8
       rect:
         serializedVersion: 2
         x: 791
-        y: 15
+        y: 5
         width: 36
         height: 37
       alignment: 9
-      pivot: {x: 0.50295514, y: 0.3617221}
+      pivot: {x: 0.5016954, y: 0.40582967}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6d28f9e4bd1f404fa7849c1b8d22545
-      internalID: -673558465
+      spriteID: ec3baa69314dd724c901eaf2cc07dec6
+      internalID: 1221508181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dusman_yay_son_-Sheet_9
+      name: okcu_boss-Sheet_9
       rect:
         serializedVersion: 2
         x: 882
-        y: 15
+        y: 5
         width: 36
         height: 37
       alignment: 9
-      pivot: {x: 0.50297546, y: 0.3786087}
+      pivot: {x: 0.5015801, y: 0.39728212}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c75becd0ff38b244a8d02f1a7c3aefe6
-      internalID: 1532753214
+      spriteID: 9f08880dccbc34a45b39cd3ae9b1c171
+      internalID: -299622402
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dusman_yay_son_-Sheet_10
+      name: okcu_boss-Sheet_10
       rect:
         serializedVersion: 2
         x: 980
-        y: 15
+        y: 5
         width: 30
         height: 37
       alignment: 9
-      pivot: {x: 0.5085612, y: 0.3784324}
+      pivot: {x: 0.510024, y: 0.39436355}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5228a06057080934e960e182674067ea
-      internalID: 229014180
+      spriteID: 3d8a90d6d96879b4fb2a711eb60ef627
+      internalID: -1105276270
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dusman_yay_son_-Sheet_11
+      name: okcu_boss-Sheet_11
       rect:
         serializedVersion: 2
         x: 1075
-        y: 15
+        y: 5
         width: 27
         height: 37
       alignment: 9
-      pivot: {x: 0.4953342, y: 0.38097242}
+      pivot: {x: 0.50527614, y: 0.39026514}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aec4afc54ad408546b481ad4a20597f3
-      internalID: -73426446
+      spriteID: 6a456edd003559d4d9fe90f8c8d0ff58
+      internalID: 852525443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dusman_yay_son_-Sheet_12
+      name: okcu_boss-Sheet_12
       rect:
         serializedVersion: 2
         x: 1170
-        y: 15
+        y: 5
         width: 27
         height: 37
       alignment: 9
-      pivot: {x: 0.49343082, y: 0.3729299}
+      pivot: {x: 0.49999547, y: 0.39357597}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56dccb4f9945862429185e0901711bb1
-      internalID: -597185582
+      spriteID: f00d0ba4ea2b94f4bb91012ec0a52a65
+      internalID: -1102690170
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dusman_yay_son_-Sheet_13
+      name: okcu_boss-Sheet_13
       rect:
         serializedVersion: 2
         x: 1265
-        y: 15
+        y: 5
         width: 28
         height: 33
       alignment: 9
-      pivot: {x: 0.50692314, y: 0.43238598}
+      pivot: {x: 0.50774276, y: 0.44742805}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12b6d4d9939b9c540883a1bba8ea0342
-      internalID: 2050094142
+      spriteID: d3c4b18c9004af84b9db67f067c082ef
+      internalID: 1860106937
       vertices: []
       indices: 
       edges: []
@@ -421,20 +421,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dusman_yay_son_-Sheet_0: 614848359
-      dusman_yay_son_-Sheet_1: -239390555
-      dusman_yay_son_-Sheet_10: 229014180
-      dusman_yay_son_-Sheet_11: -73426446
-      dusman_yay_son_-Sheet_12: -597185582
-      dusman_yay_son_-Sheet_13: 2050094142
-      dusman_yay_son_-Sheet_2: -275560810
-      dusman_yay_son_-Sheet_3: -231266486
-      dusman_yay_son_-Sheet_4: 1212319607
-      dusman_yay_son_-Sheet_5: -668287521
-      dusman_yay_son_-Sheet_6: -2039059819
-      dusman_yay_son_-Sheet_7: -1917628071
-      dusman_yay_son_-Sheet_8: -673558465
-      dusman_yay_son_-Sheet_9: 1532753214
+      okcu_boss-Sheet_0: 1568339254
+      okcu_boss-Sheet_1: -1862159605
+      okcu_boss-Sheet_10: -1105276270
+      okcu_boss-Sheet_11: 852525443
+      okcu_boss-Sheet_12: -1102690170
+      okcu_boss-Sheet_13: 1860106937
+      okcu_boss-Sheet_2: 1858498508
+      okcu_boss-Sheet_3: 371888861
+      okcu_boss-Sheet_4: 1423257324
+      okcu_boss-Sheet_5: -1511210134
+      okcu_boss-Sheet_6: -2119910565
+      okcu_boss-Sheet_7: -1168335971
+      okcu_boss-Sheet_8: 1221508181
+      okcu_boss-Sheet_9: -299622402
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
