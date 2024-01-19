@@ -55,6 +55,7 @@ public class CharacterController : MonoBehaviour
     public static Transform playerPosition;
     [SerializeField] private Light2D enemyLight2D;
     private Color originalColor;
+    [SerializeField] private Light2D swordLight2d;
     private float lastETime;
     private float cooldownDuration = 3f;
     private float coolDownTime = .7f;
@@ -315,6 +316,7 @@ public class CharacterController : MonoBehaviour
 
             other.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
             StartCoroutine(FlashRed());
+            StartCoroutine(FlashRed2());
         }
         if (other.CompareTag("chem"))
         {
@@ -322,6 +324,7 @@ public class CharacterController : MonoBehaviour
         }
         if (SpecialAttackSword.activeSelf && other.CompareTag("enemy"))
         {
+            StartCoroutine(FlashRed2());
             StartCoroutine(FlashRed());
             other.GetComponent<EnemyHealth>().TakeDamage(specialAttackDamage);
         }
@@ -362,7 +365,16 @@ public class CharacterController : MonoBehaviour
 
         enemyLight2D.color = originalColor;
     }
-    
+    IEnumerator FlashRed2()
+    {
+        swordLight2d.color = Color.red;
+
+
+        yield return new WaitForSeconds(0.5f);
+
+        swordLight2d.color = originalColor;
+    }
+
     void PlayRandomAnimation()
     {
 
