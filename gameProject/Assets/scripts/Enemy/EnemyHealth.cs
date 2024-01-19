@@ -45,7 +45,10 @@ public class EnemyHealth : MonoBehaviour
         Destroy(gameObject); // Düþman objesini yok edin
 
     }
- 
+     
+    
+       
+    
 
     void OnTriggerEnter2d(Collider other)
     {

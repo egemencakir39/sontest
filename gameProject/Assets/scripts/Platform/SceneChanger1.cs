@@ -13,7 +13,8 @@ public class SceneChanger1 : MonoBehaviour
     [SerializeField] private int requiredKeys = 5;
     [SerializeField] private TMP_Text keyCountText;
     private AudioSource audioSource;
-   
+    private float keyCollectCooldown = 3f;
+    private bool canCollectKey = true;
 
     private void Update()
     {
@@ -33,9 +34,9 @@ public class SceneChanger1 : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-        if (collision.gameObject.CompareTag("anahtar"))
+        if (canCollectKey && collision.gameObject.CompareTag("anahtar"))
         {
-            
+            StartCoroutine(KeyCollectCooldown());
             collectKey();
             Destroy(collision.gameObject);
             Debug.Log("Anahtar alýndý");
@@ -43,7 +44,12 @@ public class SceneChanger1 : MonoBehaviour
             Debug.Log("Key Count: " + collectedKeys);
         }
     }
-
+    private IEnumerator KeyCollectCooldown()
+    {
+        canCollectKey = false;
+        yield return new WaitForSeconds(keyCollectCooldown);
+        canCollectKey = true;
+    }
     public void collectKey()
     {
         collectedKeys++;

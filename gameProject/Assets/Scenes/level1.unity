@@ -54523,8 +54523,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 67024915}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.868, y: 0.013, z: -0.1491624}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalPosition: {x: -0.67, y: -0.416, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1488225974}
@@ -59240,7 +59240,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1488225974}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &182526419
 MonoBehaviour:
@@ -60274,7 +60274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c067ff111277f3c40a2fd8f1ff835415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 160
+  maxHealth: 220
   currentHealth: 0
   itemPrefab: {fileID: 5659742032159470425, guid: 2ae7b5266d16aea44a79b7efd3fc4d51, type: 3}
   knockbackForce: 6
@@ -60298,7 +60298,7 @@ MonoBehaviour:
   chaseSpeed: 3
   chaseDistance: 10
   attackDistance: 3
-  timeBetweenAttacks: 2
+  timeBetweenAttacks: 1.5
 --- !u!95 &235826704
 Animator:
   serializedVersion: 5
@@ -60655,13 +60655,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316693922}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.074, y: -0.07, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.073999405, y: -0.06999993, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1488225974}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &321378636
 GameObject:
@@ -66251,10 +66251,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c067ff111277f3c40a2fd8f1ff835415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 120
+  maxHealth: 150
   currentHealth: 0
   itemPrefab: {fileID: 5659742032159470425, guid: 2ae7b5266d16aea44a79b7efd3fc4d51, type: 3}
-  knockbackForce: 6
+  knockbackForce: 4
   point: 0
 --- !u!50 &869136349
 Rigidbody2D:
@@ -66338,12 +66338,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointA: {fileID: 649389215}
   pointB: {fileID: 1323315902}
-  moveSpeed: 3
+  moveSpeed: 4
   Damage: 10
-  chaseSpeed: 3
+  chaseSpeed: 4
   chaseDistance: 10
-  attackDistance: 3
-  timeBetweenAttacks: 2
+  attackDistance: 4
+  timeBetweenAttacks: 1
 --- !u!212 &869136353
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -71656,7 +71656,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321664651}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.2, y: 1.892, z: -10}
+  m_LocalPosition: {x: -5.200001, y: 1.8919997, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -73710,14 +73710,14 @@ MonoBehaviour:
   dashingTime: 0.3
   dashingCoolDown: 1
   swordCollider: {fileID: 67024915}
-  attackCooldown: 0.3
-  firerate: 0.5
+  attackCooldown: 0.18
+  firerate: 0.4
   attackDamage: 10
   tr: {fileID: 1488225969}
   bulletPrefab: {fileID: 7919644854715268757, guid: b020fe888a85c294ba227bbf2578674c, type: 3}
   firePoint: {fileID: 1719959086}
   BulletSpeed: 10
-  fireRateAttack2: 1.4
+  fireRateAttack2: 0.18
   FootSteps:
   - {fileID: 8300000, guid: aa2e7632352130044bd8897d1fcafde2, type: 3}
   - {fileID: 8300000, guid: fdd2d043996f95244a968f3c3d4d1e24, type: 3}
@@ -74032,15 +74032,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1488225959}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.2, y: 1.892, z: 0}
+  m_LocalPosition: {x: -5.200001, y: 1.8919997, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 67024917}
   - {fileID: 1719959086}
   - {fileID: 2130937718}
-  - {fileID: 316693924}
   - {fileID: 182526418}
+  - {fileID: 316693924}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -75776,7 +75776,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: -0.00008010864}
+  m_AnchoredPosition: {x: 0, y: -0.00008392334}
   m_SizeDelta: {x: 0, y: -8.5051}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1655927089
@@ -78375,7 +78375,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921650741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.2, y: 1.892, z: -10}
+  m_LocalPosition: {x: -5.200001, y: 1.8919997, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

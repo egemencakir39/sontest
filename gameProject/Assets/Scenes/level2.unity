@@ -118743,7 +118743,7 @@ MonoBehaviour:
   teleportDistance: 7
   firePoint: {fileID: 528374959}
   enemyBullet: {fileID: 2939288390875497000, guid: 777b54894418c274cb18c463cc1f0cbd, type: 3}
-  attackCooldown: 2
+  attackCooldown: 1.5
   teleportCoolDown: 3
 --- !u!50 &1612428722
 Rigidbody2D:
@@ -129074,10 +129074,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c067ff111277f3c40a2fd8f1ff835415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 120
+  maxHealth: 150
   currentHealth: 0
   itemPrefab: {fileID: 5659742032159470425, guid: 2ae7b5266d16aea44a79b7efd3fc4d51, type: 3}
-  knockbackForce: 6
+  knockbackForce: 4
   point: 0
 --- !u!50 &2115618840
 Rigidbody2D:
@@ -129161,12 +129161,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointA: {fileID: 795199687}
   pointB: {fileID: 955367285}
-  moveSpeed: 3
+  moveSpeed: 4
   Damage: 10
-  chaseSpeed: 3
+  chaseSpeed: 4
   chaseDistance: 10
-  attackDistance: 3
-  timeBetweenAttacks: 2.5
+  attackDistance: 4
+  timeBetweenAttacks: 1
 --- !u!212 &2115618844
 SpriteRenderer:
   m_ObjectHideFlags: 0
